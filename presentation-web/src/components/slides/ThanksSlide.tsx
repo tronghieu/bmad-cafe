@@ -30,11 +30,11 @@ export const ThanksSlide = () => (
       className="flex flex-wrap items-center justify-center gap-6 mt-8 relative z-10"
     >
       <div className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors cursor-pointer">
-        <Terminal className="w-5 h-5 text-white/70" />
-        <span className="font-mono text-sm text-white/80">github.com/tronghieu</span>
+        <Globe className="w-5 h-5 text-white/70" />
+        <span className="font-mono text-sm text-white/80">http://bmad-method.org/</span>
       </div>
       <div className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-colors cursor-pointer">
-        <Globe className="w-5 h-5 text-secondary" />
+        <Terminal className="w-5 h-5 text-secondary" />
         <span className="font-mono text-sm text-secondary">BMAD Method V6</span>
       </div>
     </motion.div>
