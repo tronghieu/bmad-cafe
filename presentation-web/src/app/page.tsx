@@ -1,6 +1,7 @@
 import Presentation from '@/components/Presentation';
 import { HeroSlide } from '@/components/slides/HeroSlide';
 import { IntroSlide } from '@/components/slides/IntroSlide';
+import { AgendaSlide } from '@/components/slides/AgendaSlide';
 import { VibeCodingSlide } from '@/components/slides/VibeCodingSlide';
 import { ProblemSlide } from '@/components/slides/ProblemSlide';
 import { ShiftSlide } from '@/components/slides/ShiftSlide';
@@ -15,13 +16,20 @@ import { BrownfieldSlide } from '@/components/slides/BrownfieldSlide';
 import { BenefitsSlide } from '@/components/slides/BenefitsSlide';
 import { ProsSlide } from '@/components/slides/ProsSlide';
 import { ConsSlide } from '@/components/slides/ConsSlide';
-import { ExperienceSlide } from '@/components/slides/ExperienceSlide';
+import { SectionHeadingSlide } from '@/components/slides/SectionHeadingSlide';
 
 export default function Home() {
   return (
     <Presentation>
       <HeroSlide />
       <IntroSlide />
+      <AgendaSlide />
+      <SectionHeadingSlide 
+        number="01" 
+        title="Giới thiệu về BMAD Method" 
+        subtitle="Kỷ luật & Cấu trúc là nền tảng của tự do trong lập trình Agentic."
+        variant="secondary"
+      />
       <VibeCodingSlide />
       <ProblemSlide />
       <ShiftSlide />
@@ -36,7 +44,12 @@ export default function Home() {
       <BenefitsSlide />
       <ProsSlide />
       <ConsSlide />
-      <ExperienceSlide />
+      <SectionHeadingSlide 
+        number="02" 
+        title="Chia sẻ kinh nghiệm áp dụng" 
+        subtitle="Từ lý thuyết đến thực thi - Hành trình tối ưu hóa với AI Agent."
+        variant="accent"
+      />
     </Presentation>
   );
 }
