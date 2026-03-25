@@ -12,6 +12,8 @@ import { CascadeSlide } from '@/components/slides/CascadeSlide';
 import { ScalableIntelligenceSlide } from '@/components/slides/ScalableIntelligenceSlide';
 import { BrownfieldSlide } from '@/components/slides/BrownfieldSlide';
 import { BenefitsSlide } from '@/components/slides/BenefitsSlide';
+import { ProsSlide } from '@/components/slides/ProsSlide';
+import { ConsSlide } from '@/components/slides/ConsSlide';
 import { ExperienceSlide } from '@/components/slides/ExperienceSlide';
 
 export default function Home() {
@@ -30,6 +32,8 @@ export default function Home() {
       <ScalableIntelligenceSlide />
       <BrownfieldSlide />
       <BenefitsSlide />
+      <ProsSlide />
+      <ConsSlide />
       <ExperienceSlide />
     </Presentation>
   );
