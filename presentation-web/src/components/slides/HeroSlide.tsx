@@ -55,12 +55,12 @@ export const HeroSlide = () => (
       </div>
     </motion.div>
 
-    <div className="pt-4 flex justify-center gap-6">
-      <div className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-sm font-mono text-white/50">
-        AI-DRIVEN AGILE
+    <div className="pt-4 flex justify-center flex-wrap gap-4">
+      <div className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-sm font-mono text-white/50 uppercase tracking-wider">
+        AI Agent Agile Teams
       </div>
-      <div className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-sm font-mono text-white/50">
-        VERSION CONTROLLED
+      <div className="px-6 py-2 bg-white/5 rounded-full border border-white/10 text-sm font-mono text-white/50 uppercase tracking-wider">
+        Context Engineering Framework
       </div>
     </div>
   </div>
