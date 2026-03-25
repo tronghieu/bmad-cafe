@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, GitCompare, Cpu, Maximize, FileText, Eye, ArrowRight } from 'lucide-react';
+import { ShieldCheck, GitCompare, Cpu, Maximize, Bot, Eye, ArrowRight } from 'lucide-react';
 
 /**
  * Slide showcasing the advantages of the BMAD Method.
@@ -59,9 +59,9 @@ export const ProsSlide = () => (
           accent: "text-cyan-400"
         },
         { 
-          title: "Tự Động Tài Liệu", 
-          desc: "PRD, Architecture và User Stories luôn song hành cùng mã nguồn như một tiêu chuẩn.", 
-          icon: <FileText className="w-8 h-8" />,
+          title: "Độc Lập Mô Hình AI", 
+          desc: "Khung kỹ thuật ngữ cảnh (Context Framework) linh hoạt, cho phép sử dụng với bất kỳ AI nào (Claude, Gemini, Qwen...).", 
+          icon: <Bot className="w-8 h-8" />,
           color: "border-orange-500/30 bg-orange-500/5",
           accent: "text-orange-400"
         },
