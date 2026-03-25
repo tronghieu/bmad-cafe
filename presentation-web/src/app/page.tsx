@@ -27,10 +27,10 @@ export default function Home() {
       <VirtualSquadSlide />
       <AgentCodeSlide />
       <LifecycleSlide />
-      <ShardingSlide />
+      {/* <ShardingSlide /> */}
       <CascadeSlide />
-      <ScalableIntelligenceSlide />
-      <BrownfieldSlide />
+      {/* <ScalableIntelligenceSlide /> */}
+      {/* <BrownfieldSlide /> */}
       <BenefitsSlide />
       <ProsSlide />
       <ConsSlide />
