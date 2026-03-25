@@ -17,6 +17,7 @@ import { BenefitsSlide } from '@/components/slides/BenefitsSlide';
 import { ProsSlide } from '@/components/slides/ProsSlide';
 import { ConsSlide } from '@/components/slides/ConsSlide';
 import { SectionHeadingSlide } from '@/components/slides/SectionHeadingSlide';
+import { CapigoProjectSlide } from '@/components/slides/CapigoProjectSlide';
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
         subtitle="Từ lý thuyết đến thực thi - Hành trình tối ưu hóa với AI Agent."
         variant="accent"
       />
+      <CapigoProjectSlide />
     </Presentation>
   );
 }
