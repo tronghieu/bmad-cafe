@@ -1,5 +1,6 @@
 import Presentation from '@/components/Presentation';
 import { HeroSlide } from '@/components/slides/HeroSlide';
+import { SpeakerSlide } from '@/components/slides/SpeakerSlide';
 import { IntroSlide } from '@/components/slides/IntroSlide';
 import { AgendaSlide } from '@/components/slides/AgendaSlide';
 import { VibeCodingSlide } from '@/components/slides/VibeCodingSlide';
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <Presentation>
       <HeroSlide />
+      <SpeakerSlide />
       <IntroSlide />
       <AgendaSlide />
       <SectionHeadingSlide 
