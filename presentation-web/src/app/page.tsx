@@ -18,6 +18,13 @@ import { ProsSlide } from '@/components/slides/ProsSlide';
 import { ConsSlide } from '@/components/slides/ConsSlide';
 import { SectionHeadingSlide } from '@/components/slides/SectionHeadingSlide';
 import { CapigoProjectSlide } from '@/components/slides/CapigoProjectSlide';
+import { StoryPhase1Slide } from '@/components/slides/StoryPhase1Slide';
+import { StoryPhase2Slide } from '@/components/slides/StoryPhase2Slide';
+import { StoryPhase3Slide } from '@/components/slides/StoryPhase3Slide';
+import { StoryLesson1Slide } from '@/components/slides/StoryLesson1Slide';
+import { StoryLesson2Slide } from '@/components/slides/StoryLesson2Slide';
+import { StoryLesson3Slide } from '@/components/slides/StoryLesson3Slide';
+import { ThanksSlide } from '@/components/slides/ThanksSlide';
 
 export default function Home() {
   return (
@@ -52,6 +59,13 @@ export default function Home() {
         variant="accent"
       />
       <CapigoProjectSlide />
+      <StoryPhase1Slide />
+      <StoryPhase2Slide />
+      <StoryPhase3Slide />
+      <StoryLesson1Slide />
+      <StoryLesson2Slide />
+      <StoryLesson3Slide />
+      <ThanksSlide />
     </Presentation>
   );
 }
