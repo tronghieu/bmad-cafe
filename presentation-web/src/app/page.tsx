@@ -64,6 +64,12 @@ export default function Home() {
       <ConsSlide />
       <SectionHeadingSlide
         number="02"
+        title="Chia sẻ kinh nghiệm áp dụng"
+        subtitle="Từ lý thuyết đến thực thi - Hành trình tối ưu hóa với AI Agent."
+        variant="accent"
+      />
+      <SectionHeadingSlide
+        number="2.1"
         title="Quick Flow"
         subtitle="Nhanh nhưng không ẩu"
         variant="secondary"
@@ -77,9 +83,8 @@ export default function Home() {
       <AdversarialReviewSlide />
       <QuickFlowTipsSlide />
       <SectionHeadingSlide
-        number="03"
-        title="Chia sẻ kinh nghiệm áp dụng"
-        subtitle="Từ lý thuyết đến thực thi - Hành trình tối ưu hóa với AI Agent."
+        number="2.2"
+        title="Câu chuyện của Lưu Hiếu"
         variant="accent"
       />
       <CapigoProjectSlide />
