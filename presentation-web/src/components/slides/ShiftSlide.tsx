@@ -11,7 +11,7 @@ export const ShiftSlide = () => (
       <table className="w-full text-left border-collapse">
         <thead>
           <tr className="bg-white/5">
-            <th className="p-6 text-white/40 font-mono text-sm uppercase">Đặc tính</th>
+            <th className="p-6 text-white/40 font-sans text-sm">ĐẶC TÍNH</th>
             <th className="p-6 text-accent font-bold text-xl text-center">VIBE CODING</th>
             <th className="p-6 text-secondary font-bold text-xl text-center border-l border-white/10 bg-secondary/10">BMAD METHOD</th>
           </tr>
