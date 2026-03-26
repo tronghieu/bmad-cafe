@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface PresentationProps {
@@ -14,14 +14,54 @@ interface PresentationProps {
  */
 export default function Presentation({ children }: PresentationProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isDark, setIsDark] = useState(true);
   const totalSlides = children.length;
 
+  useEffect(() => {
+    const stored = localStorage.getItem('theme');
+    const dark = stored ? stored === 'dark' : true;
+    setIsDark(dark);
+    document.documentElement.classList.toggle('dark', dark);
+
+    const params = new URLSearchParams(window.location.search);
+    const slide = parseInt(params.get('slide') ?? '1', 10);
+    if (!isNaN(slide) && slide >= 1 && slide <= totalSlides) {
+      setCurrentSlide(slide - 1);
+    }
+  }, [totalSlides]);
+
+  const toggleTheme = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle('dark', next);
+    localStorage.setItem('theme', next ? 'dark' : 'light');
+  };
+
+  const goToSlide = useCallback((idx: number) => {
+    setCurrentSlide(idx);
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', String(idx + 1));
+    window.history.replaceState(null, '', `?${params.toString()}`);
+  }, []);
+
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev < totalSlides - 1 ? prev + 1 : prev));
+    setCurrentSlide((prev) => {
+      const next = prev < totalSlides - 1 ? prev + 1 : prev;
+      const params = new URLSearchParams(window.location.search);
+      params.set('slide', String(next + 1));
+      window.history.replaceState(null, '', `?${params.toString()}`);
+      return next;
+    });
   }, [totalSlides]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
+    setCurrentSlide((prev) => {
+      const next = prev > 0 ? prev - 1 : prev;
+      const params = new URLSearchParams(window.location.search);
+      params.set('slide', String(next + 1));
+      window.history.replaceState(null, '', `?${params.toString()}`);
+      return next;
+    });
   }, []);
 
   useEffect(() => {
@@ -49,7 +89,14 @@ export default function Presentation({ children }: PresentationProps) {
   return (
     <main className="relative h-screen w-screen bg-background overflow-hidden flex flex-col items-center justify-center p-8">
       {/* Navigation UI */}
-      <div className="absolute top-4 right-4 flex gap-4 z-50">
+      <div className="absolute top-4 right-4 flex gap-2 z-50">
+        <button
+          onClick={toggleTheme}
+          className="p-2 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/80 transition-all opacity-40 hover:opacity-100"
+          title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        >
+          {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+        </button>
         <button
           onClick={toggleFullscreen}
           className="p-2 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/80 transition-all opacity-40 hover:opacity-100"
@@ -75,7 +122,7 @@ export default function Presentation({ children }: PresentationProps) {
           {children.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => setCurrentSlide(idx)}
+              onClick={() => goToSlide(idx)}
               className={cn(
                 "w-3 h-3 rounded-full transition-all",
                 currentSlide === idx ? "bg-secondary scale-125" : "bg-border hover:bg-secondary/50"

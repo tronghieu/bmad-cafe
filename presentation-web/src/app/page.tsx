@@ -18,6 +18,14 @@ import { BenefitsSlide } from '@/components/slides/BenefitsSlide';
 import { ProsSlide } from '@/components/slides/ProsSlide';
 import { ConsSlide } from '@/components/slides/ConsSlide';
 import { SectionHeadingSlide } from '@/components/slides/SectionHeadingSlide';
+import { QuickFlowOverviewSlide } from '@/components/slides/QuickFlowOverviewSlide';
+import { ProjectContextSlide } from '@/components/slides/ProjectContextSlide';
+import { FullFlowSlide } from '@/components/slides/FullFlowSlide';
+import { QuickFlowDetailSlide } from '@/components/slides/QuickFlowDetailSlide';
+import { QuickSpecSlide } from '@/components/slides/QuickSpecSlide';
+import { QuickDevSlide } from '@/components/slides/QuickDevSlide';
+import { AdversarialReviewSlide } from '@/components/slides/AdversarialReviewSlide';
+import { QuickFlowTipsSlide } from '@/components/slides/QuickFlowTipsSlide';
 import { CapigoProjectSlide } from '@/components/slides/CapigoProjectSlide';
 import { StoryPhase1Slide } from '@/components/slides/StoryPhase1Slide';
 import { StoryPhase2Slide } from '@/components/slides/StoryPhase2Slide';
@@ -54,9 +62,23 @@ export default function Home() {
       <BenefitsSlide />
       <ProsSlide />
       <ConsSlide />
-      <SectionHeadingSlide 
-        number="02" 
-        title="Chia sẻ kinh nghiệm áp dụng" 
+      <SectionHeadingSlide
+        number="02"
+        title="Quick Flow"
+        subtitle="Nhanh nhưng không ẩu"
+        variant="secondary"
+      />
+      <QuickFlowOverviewSlide />
+      <FullFlowSlide />
+      <QuickFlowDetailSlide />
+      <ProjectContextSlide />
+      <QuickSpecSlide />
+      <QuickDevSlide />
+      <AdversarialReviewSlide />
+      <QuickFlowTipsSlide />
+      <SectionHeadingSlide
+        number="03"
+        title="Chia sẻ kinh nghiệm áp dụng"
         subtitle="Từ lý thuyết đến thực thi - Hành trình tối ưu hóa với AI Agent."
         variant="accent"
       />
