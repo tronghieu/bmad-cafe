@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart2, FileText, Cpu, Code2, CheckCircle2 } from 'lucide-react';
+import { BarChart2, CheckCircle2 } from 'lucide-react';
 
 const phases = [
   {

@@ -35,14 +35,6 @@ const tips = [
   },
 ];
 
-const commands = [
-  { task: 'Trợ giúp', cmd: '/bmad-help' },
-  { task: 'Tạo project context', cmd: '/bmad-bmm-generate-project-context' },
-  { task: 'Bắt đầu Quick Flow (QS + QD)', cmd: '/bmad-agent-bmm-quick-flow-solo-dev' },
-  { task: 'Quick Spec', cmd: '/bmad-bmm-quick-spec' },
-  { task: 'Quick Dev', cmd: '/bmad-bmm-quick-dev' },
-  { task: 'Code review', cmd: '/bmad-bmm-code-review' },
-];
 
 export const QuickFlowTipsSlide = () => (
   <div className="w-full max-w-6xl space-y-8">

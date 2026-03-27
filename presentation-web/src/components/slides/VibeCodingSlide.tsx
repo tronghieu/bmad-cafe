@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Terminal } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
 
 export const VibeCodingSlide = () => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-5xl">

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {motion} from 'framer-motion';
-import {Terminal, GitBranch, ShieldAlert, Wrench} from 'lucide-react';
+import {Terminal} from 'lucide-react';
 
 export const QuickDevSlide = () => (
     <div className="w-full max-w-5xl space-y-8">

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Zap, ArrowRight } from 'lucide-react';
 
 const workflows = [
   {

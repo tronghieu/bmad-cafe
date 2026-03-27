@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { cn } from '@/lib/utils';
+
 
 export const ShiftSlide = () => (
   <div className="w-full max-w-5xl space-y-12">

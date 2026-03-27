@@ -35,13 +35,6 @@ const steps = [
   },
 ];
 
-const readyStandard = [
-  { label: 'Actionable', desc: 'Mỗi task có file path cụ thể và hành động rõ ràng' },
-  { label: 'Logical', desc: 'Task sắp xếp theo dependency — thấp nhất trước' },
-  { label: 'Testable', desc: 'Tất cả AC dùng Given/When/Then bao phủ happy path + edge cases' },
-  { label: 'Complete', desc: 'Không có placeholder hay TBD — tất cả findings đã inline' },
-  { label: 'Self-Contained', desc: 'Agent mới có thể triển khai mà không cần đọc lịch sử chat' },
-];
 
 export const QuickSpecSlide = () => (
   <div className="w-full max-w-6xl space-y-8">
