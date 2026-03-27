@@ -1,10 +1,18 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { AlertTriangle, Fingerprint, RefreshCcw, Activity } from 'lucide-react';
 
-export const StoryPhase2Slide = () => (
+export const StoryPhase2Slide = () => {
+  const particleValues = useMemo(() =>
+    [0, 1, 2].map(() => ({
+      opacity: 0.5 + Math.random() * 0.5,
+      x: Math.random() * 10 - 5,
+      y: Math.random() * 10 - 5,
+    })), []);
+
+  return (
   <div className="w-full max-w-5xl flex flex-col md:flex-row-reverse gap-12 items-center px-6">
     <div className="flex-1 space-y-8">
       <motion.div
@@ -23,7 +31,7 @@ export const StoryPhase2Slide = () => (
       <div className="space-y-6 text-xl text-foreground/70 font-light leading-relaxed">
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex gap-4">
           <Fingerprint className="w-6 h-6 text-accent shrink-0 mt-1" />
-          <p><strong className="text-white font-medium">Bất lực trong kiểm soát ngữ cảnh:</strong> AI không tự đóng khu được context. Nó có thể phá hỏng cả những module đã chạy ổn trước đó, dù đã nỗ lực cài đặt các "rule" rất chặt trong Cursor.</p>
+          <p><strong className="text-white font-medium">Bất lực trong kiểm soát ngữ cảnh:</strong> AI không tự đóng khu được context. Nó có thể phá hỏng cả những module đã chạy ổn trước đó, dù đã nỗ lực cài đặt các &quot;rule&quot; rất chặt trong Cursor.</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="flex gap-4">
           <RefreshCcw className="w-6 h-6 text-accent shrink-0 mt-1" />
@@ -41,15 +49,15 @@ export const StoryPhase2Slide = () => (
       
       {/* Visualizing chaos and context loss */}
       <div className="relative z-10 w-full h-full flex flex-col justify-center items-center gap-4">
-        {[1, 2, 3].map((_, i) => (
+        {particleValues.map((vals, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.8, x: i % 2 === 0 ? -20 : 20 }}
             animate={{ 
-              opacity: 0.5 + Math.random() * 0.5, 
+              opacity: vals.opacity, 
               scale: 1, 
-              x: Math.random() * 10 - 5,
-              y: Math.random() * 10 - 5
+              x: vals.x,
+              y: vals.y
             }}
             transition={{ 
               duration: 2, 
@@ -67,4 +75,5 @@ export const StoryPhase2Slide = () => (
       </div>
     </div>
   </div>
-);
+  );
+};

@@ -24,7 +24,7 @@ const fs = require('fs');
     await page.goto(`http://localhost:3001?slide=${i}`, { waitUntil: 'networkidle0' });
     
     // Give components time to finish intro animations
-    await new Promise(r => setTimeout(r, 1500));
+    await new Promise(r => setTimeout(r, 4500));
     
     const pdfBytes = await page.pdf({
       width: '1920px',

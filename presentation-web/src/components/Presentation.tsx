@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Maximize2, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -13,22 +13,28 @@ interface PresentationProps {
  * Main shell component to manage the slides and navigation.
  */
 export default function Presentation({ children }: PresentationProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isDark, setIsDark] = useState(true);
-  const totalSlides = children.length;
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    const dark = stored ? stored === 'dark' : true;
-    setIsDark(dark);
-    document.documentElement.classList.toggle('dark', dark);
-
+  const [currentSlide, setCurrentSlide] = useState<number>(() => {
+    if (typeof window === 'undefined') return 0;
     const params = new URLSearchParams(window.location.search);
     const slide = parseInt(params.get('slide') ?? '1', 10);
-    if (!isNaN(slide) && slide >= 1 && slide <= totalSlides) {
-      setCurrentSlide(slide - 1);
-    }
-  }, [totalSlides]);
+    return isNaN(slide) ? 0 : Math.max(0, slide - 1);
+  });
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return true;
+    const stored = localStorage.getItem('theme');
+    return stored ? stored === 'dark' : true;
+  });
+  const totalSlides = children.length;
+  const currentSlideRef = useRef(currentSlide);
+  useLayoutEffect(() => {
+    currentSlideRef.current = currentSlide;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+  }, [isDark]);
+
+
 
   const toggleTheme = () => {
     const next = !isDark;
@@ -39,30 +45,28 @@ export default function Presentation({ children }: PresentationProps) {
 
   const goToSlide = useCallback((idx: number) => {
     setCurrentSlide(idx);
-    const params = new URLSearchParams(window.location.search);
-    params.set('slide', String(idx + 1));
-    window.history.replaceState(null, '', `?${params.toString()}`);
   }, []);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => {
-      const next = prev < totalSlides - 1 ? prev + 1 : prev;
-      const params = new URLSearchParams(window.location.search);
-      params.set('slide', String(next + 1));
-      window.history.replaceState(null, '', `?${params.toString()}`);
-      return next;
-    });
+    const next = currentSlideRef.current < totalSlides - 1
+      ? currentSlideRef.current + 1
+      : currentSlideRef.current;
+    setCurrentSlide(next);
   }, [totalSlides]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => {
-      const next = prev > 0 ? prev - 1 : prev;
-      const params = new URLSearchParams(window.location.search);
-      params.set('slide', String(next + 1));
-      window.history.replaceState(null, '', `?${params.toString()}`);
-      return next;
-    });
+    const next = currentSlideRef.current > 0
+      ? currentSlideRef.current - 1
+      : currentSlideRef.current;
+    setCurrentSlide(next);
   }, []);
+
+  // Sync URL whenever currentSlide changes (side effect belongs here, not in setState)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', String(currentSlide + 1));
+    window.history.replaceState(null, '', `?${params.toString()}`);
+  }, [currentSlide]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

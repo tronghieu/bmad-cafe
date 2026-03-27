@@ -13,6 +13,15 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // Slide content uses quotes intentionally — escaping would hurt readability
+      "react/no-unescaped-entities": "off",
+      // Math.random in animation props is intentional (handled in useMemo)
+      "react-hooks/purity": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;
+
