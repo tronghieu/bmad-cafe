@@ -22,7 +22,23 @@ Các trụ cột thiết kế chính:
 4. **Chuyển động (Motion):**
    - Sử dụng `framer-motion` cho các hiệu ứng chuyển cảnh điện ảnh (Cinematic) và mượt mà (Fluid), giúp việc trình bày các concept kỹ thuật không bị khô khan.
 
+## 👀 Cách xem bài thuyết trình
+
+### Option 1: Tải PDF (nhanh nhất)
+Tải file PDF đã xuất sẵn tại [`docs/BMAD_Agentic_Engineering_Presentation.pdf`](./docs/BMAD_Agentic_Engineering_Presentation.pdf) — bao gồm đầy đủ 37 trang với tất cả hiệu ứng đã được render.
+
+### Option 2: Chạy website (đầy đủ animation)
+```bash
+cd presentation-web
+pnpm install
+pnpm dev
+```
+Mở trình duyệt tại `http://localhost:3000` để xem bài thuyết trình với đầy đủ animation và hiệu ứng chuyển cảnh.
+
+---
+
 ## 🛠 Cách phát triển
 1. Di chuyển vào thư mục web: `cd presentation-web`
 2. Cài đặt: `pnpm install`
 3. Chạy dev: `pnpm dev`
+4. Xuất PDF: `node export-pdf.js` (yêu cầu dev server đang chạy)

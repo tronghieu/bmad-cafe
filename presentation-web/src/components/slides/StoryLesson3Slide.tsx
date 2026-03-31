@@ -63,7 +63,7 @@ export const StoryLesson3Slide = () => (
         <div className="absolute top-4 left-1/2 -translate-x-1/2 w-16 h-1 bg-white/10 rounded-full"></div>
         
         <div className="flex-1 overflow-hidden relative rounded-2xl border border-secondary/20 bg-black/50 p-6 font-mono text-sm text-secondary/70 flex flex-col gap-3">
-           <div className="text-white/40 mb-2">// Automated Test Suite</div>
+           <div className="text-white/40 mb-2"><span>&#47;&#47; Automated Test Suite</span></div>
            <motion.div 
              initial={{ opacity: 0, x: -10 }}
              whileInView={{ opacity: 1, x: 0 }}

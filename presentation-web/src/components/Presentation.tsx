@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, Moon, Sun } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface PresentationProps {
@@ -13,16 +13,60 @@ interface PresentationProps {
  * Main shell component to manage the slides and navigation.
  */
 export default function Presentation({ children }: PresentationProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(() => {
+    if (typeof window === 'undefined') return 0;
+    const params = new URLSearchParams(window.location.search);
+    const slide = parseInt(params.get('slide') ?? '1', 10);
+    return isNaN(slide) ? 0 : Math.max(0, slide - 1);
+  });
+  const [isDark, setIsDark] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return true;
+    const stored = localStorage.getItem('theme');
+    return stored ? stored === 'dark' : true;
+  });
   const totalSlides = children.length;
+  const currentSlideRef = useRef(currentSlide);
+  useLayoutEffect(() => {
+    currentSlideRef.current = currentSlide;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+  }, [isDark]);
+
+
+
+  const toggleTheme = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle('dark', next);
+    localStorage.setItem('theme', next ? 'dark' : 'light');
+  };
+
+  const goToSlide = useCallback((idx: number) => {
+    setCurrentSlide(idx);
+  }, []);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev < totalSlides - 1 ? prev + 1 : prev));
+    const next = currentSlideRef.current < totalSlides - 1
+      ? currentSlideRef.current + 1
+      : currentSlideRef.current;
+    setCurrentSlide(next);
   }, [totalSlides]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev > 0 ? prev - 1 : prev));
+    const next = currentSlideRef.current > 0
+      ? currentSlideRef.current - 1
+      : currentSlideRef.current;
+    setCurrentSlide(next);
   }, []);
+
+  // Sync URL whenever currentSlide changes (side effect belongs here, not in setState)
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('slide', String(currentSlide + 1));
+    window.history.replaceState(null, '', `?${params.toString()}`);
+  }, [currentSlide]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -49,7 +93,14 @@ export default function Presentation({ children }: PresentationProps) {
   return (
     <main className="relative h-screen w-screen bg-background overflow-hidden flex flex-col items-center justify-center p-8">
       {/* Navigation UI */}
-      <div className="absolute top-4 right-4 flex gap-4 z-50">
+      <div className="absolute top-4 right-4 flex gap-2 z-50">
+        <button
+          onClick={toggleTheme}
+          className="p-2 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/80 transition-all opacity-40 hover:opacity-100"
+          title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        >
+          {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+        </button>
         <button
           onClick={toggleFullscreen}
           className="p-2 bg-secondary text-secondary-foreground rounded-full hover:bg-secondary/80 transition-all opacity-40 hover:opacity-100"
@@ -75,7 +126,7 @@ export default function Presentation({ children }: PresentationProps) {
           {children.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => setCurrentSlide(idx)}
+              onClick={() => goToSlide(idx)}
               className={cn(
                 "w-3 h-3 rounded-full transition-all",
                 currentSlide === idx ? "bg-secondary scale-125" : "bg-border hover:bg-secondary/50"

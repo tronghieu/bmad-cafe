@@ -39,7 +39,7 @@ export const AgentCodeSlide = () => (
             <div className="text-foreground/60">- draw_architecture_diagrams</div>
             <div className="text-foreground/60">- define_database_schema</div>
           </div>
-          <div className="mt-2 px-2 py-0.5 w-fit bg-orange-500/20 text-orange-400 text-[10px] rounded border border-orange-500/30 uppercase tracking-tighter">Năng Lực</div>
+          <div className="mt-2 px-2 py-0.5 w-fit bg-orange-500/20 text-orange-400 text-[10px] rounded border border-orange-500/30 font-sans tracking-tighter">NĂNG LỰC</div>
         </div>
         <div>
           <span className="text-blue-400">constraints:</span>
@@ -47,7 +47,7 @@ export const AgentCodeSlide = () => (
             <div>- Không bao giờ tự ý chọn thư viện mới</div>
             <div>- Phải tuân thủ REST API conventions</div>
           </div>
-          <div className="mt-2 px-2 py-0.5 w-fit bg-red-500/20 text-red-400 text-[10px] rounded border border-red-500/30 uppercase tracking-tighter">Giới Hạn</div>
+          <div className="mt-2 px-2 py-0.5 w-fit bg-red-500/20 text-red-400 text-[10px] rounded border border-red-500/30 font-sans tracking-tighter">GIỚI HẠN</div>
         </div>
       </div>
     </div>

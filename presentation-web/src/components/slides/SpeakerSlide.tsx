@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Briefcase, Quote, CheckCircle2 } from 'lucide-react';
+import { User, Briefcase, CheckCircle2 } from 'lucide-react';
 import Image from 'next/image';
 
 export const SpeakerSlide = () => {

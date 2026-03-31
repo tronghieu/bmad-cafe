@@ -1,17 +1,44 @@
 @import "tailwindcss";
 
+/* Class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light mode: dark-navy-on-white feel */
+  --background: #f0f4f8;
+  --foreground: #0A192F;
   --primary: #0A192F;
   --primary-foreground: #ffffff;
-  --secondary: #10B981;
+  --secondary: #059669;
   --secondary-foreground: #ffffff;
-  --accent: #F59E0B;
+  --accent: #D97706;
   --accent-foreground: #ffffff;
-  --card: #f8fafc;
-  --card-foreground: #1e293b;
-  --border: #e2e8f0;
+  --card: #ffffff;
+  --card-foreground: #0A192F;
+  --border: #cbd5e1;
+
+  /* Slide-specific overrides: remap white-opacity utilities to dark equivalents */
+  --slide-text: #0A192F;
+  --slide-text-muted: rgba(10, 25, 47, 0.65);
+  --slide-surface: rgba(10, 25, 47, 0.05);
+  --slide-surface-hover: rgba(10, 25, 47, 0.09);
+  --slide-border: rgba(10, 25, 47, 0.12);
+}
+
+.dark {
+  --background: #0A192F;
+  --foreground: #f8fafc;
+  --card: #1E293B;
+  --card-foreground: #f8fafc;
+  --border: #334155;
+  --secondary: #10B981;
+  --accent: #F59E0B;
+
+  --slide-text: #ffffff;
+  --slide-text-muted: rgba(255, 255, 255, 0.65);
+  --slide-surface: rgba(255, 255, 255, 0.05);
+  --slide-surface-hover: rgba(255, 255, 255, 0.09);
+  --slide-border: rgba(255, 255, 255, 0.10);
 }
 
 @theme inline {
@@ -30,30 +57,54 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0A192F;
-    --foreground: #f8fafc;
-    --card: #1E293B;
-    --card-foreground: #f8fafc;
-    --border: #334155;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  overflow: hidden; /* Prevent scrolling for the presentation */
+  overflow: hidden;
 }
 
-/* Custom scrollbar for small areas if needed */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: 4px;
-}
+/*
+  Override Tailwind's white/opacity utilities so they work in light mode.
+  In dark mode these resolve to white-on-dark (existing behavior).
+  In light mode they resolve to dark-on-light equivalents via CSS vars.
+*/
+
+/* text-white -> slide-text */
+.text-white { color: var(--slide-text) !important; }
+
+/* text-white/{opacity} variants */
+.text-white\/90 { color: color-mix(in srgb, var(--slide-text) 90%, transparent) !important; }
+.text-white\/80 { color: color-mix(in srgb, var(--slide-text) 80%, transparent) !important; }
+.text-white\/70 { color: color-mix(in srgb, var(--slide-text) 70%, transparent) !important; }
+.text-white\/60 { color: color-mix(in srgb, var(--slide-text) 60%, transparent) !important; }
+.text-white\/55 { color: color-mix(in srgb, var(--slide-text) 55%, transparent) !important; }
+.text-white\/50 { color: color-mix(in srgb, var(--slide-text) 50%, transparent) !important; }
+.text-white\/40 { color: color-mix(in srgb, var(--slide-text) 40%, transparent) !important; }
+.text-white\/35 { color: color-mix(in srgb, var(--slide-text) 35%, transparent) !important; }
+.text-white\/30 { color: color-mix(in srgb, var(--slide-text) 30%, transparent) !important; }
+.text-white\/20 { color: color-mix(in srgb, var(--slide-text) 20%, transparent) !important; }
+.text-white\/10 { color: color-mix(in srgb, var(--slide-text) 10%, transparent) !important; }
+
+/* bg-white/{opacity} -> slide-surface equivalents */
+.bg-white\/\[0\.03\] { background-color: color-mix(in srgb, var(--slide-text) 3%, transparent) !important; }
+.bg-white\/\[0\.08\] { background-color: color-mix(in srgb, var(--slide-text) 8%, transparent) !important; }
+.bg-white\/5  { background-color: color-mix(in srgb, var(--slide-text) 5%, transparent) !important; }
+.bg-white\/10 { background-color: color-mix(in srgb, var(--slide-text) 10%, transparent) !important; }
+.bg-white\/20 { background-color: color-mix(in srgb, var(--slide-text) 15%, transparent) !important; }
+
+/* border-white/{opacity} */
+.border-white\/5  { border-color: color-mix(in srgb, var(--slide-text) 5%, transparent) !important; }
+.border-white\/10 { border-color: color-mix(in srgb, var(--slide-text) 10%, transparent) !important; }
+.border-white\/20 { border-color: color-mix(in srgb, var(--slide-text) 20%, transparent) !important; }
+.border-white\/40 { border-color: color-mix(in srgb, var(--slide-text) 35%, transparent) !important; }
+
+/* hover: variants need to be explicit */
+.hover\:bg-white\/\[0\.08\]:hover { background-color: color-mix(in srgb, var(--slide-text) 8%, transparent) !important; }
+.hover\:border-white\/10:hover   { border-color: color-mix(in srgb, var(--slide-text) 10%, transparent) !important; }
+.hover\:border-white\/20:hover   { border-color: color-mix(in srgb, var(--slide-text) 20%, transparent) !important; }
+.hover\:text-white:hover         { color: var(--slide-text) !important; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 4px; }

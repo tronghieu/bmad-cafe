@@ -9,7 +9,6 @@ import {
   Package, 
   Settings, 
   ShoppingCart, 
-  CheckCircle2,
   Cpu
 } from 'lucide-react';
 
