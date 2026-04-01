@@ -17,10 +17,19 @@
 - The role of the human should stay explicit throughout: humans set direction, approve tradeoffs, define guardrails, and verify outputs.
 - Large productivity claims must be anchored to named case studies, not stated as universal guarantees.
 - AI-generated images should be used sparingly. Only hero or concept-heavy slides should get bespoke visuals; most slides should rely on typography, diagrams, screenshots, or real artifacts.
+- In this deck, an image is **supporting atmosphere or metaphor**, not the carrier of the full argument. Every slide still needs explicit copy, proof, and structure.
 
 ---
 
 ## Visual Asset Strategy
+
+### Core Rule
+
+- A custom image should **support** the slide, not replace it.
+- The image should provide mood, metaphor, or visual texture while the actual message stays in text, diagrams, metrics, or artifacts.
+- Prompts should avoid trying to encode the entire slide meaning into one image.
+- For hero images, prefer compositions with **clear negative space** for headline, subhead, and proof overlays.
+- Avoid putting pseudo-infographics, fake UI, or embedded labels into the generated image. Those should be added in the presentation itself.
 
 ### Slides That Merit Custom AI Images
 
@@ -140,8 +149,8 @@
 - **Supporting Detail:** Use a visually ugly code sample with inconsistent naming, duplicated logic, and obvious confusion. Do not explain BMAD yet.
 - **Proof / Evidence:** If real code cannot be shown, use a synthetic example labeled internally as illustrative only.
 - **Speaker Angle:** Slightly accusatory, then empathetic. The line should feel uncomfortably familiar, not insulting.
-- **Image Direction:** Messy AI code filling the screen, visually hard to trust.
-- **AI Image Prompt:** `A dark cinematic scene of a laptop screen filled with chaotic AI-generated source code, tangled logic, duplicated functions, warning symbols, high contrast, realistic developer workspace, no readable text, no logos, 16:9`
+- **Image Direction:** Background mood image only. The accusation and takeaway must still come from slide copy.
+- **AI Image Prompt:** `A dark cinematic developer workspace with one laptop showing messy, chaotic source code, moody lighting, high contrast, realistic but restrained detail, generous negative space for headline overlay, no readable text, no logos, 16:9`
 
 ### Slide 2 — The 3-Day Miracle
 - **Goal:** Prove that the alternative is not "slow and bureaucratic"; it can also be fast.
@@ -149,8 +158,8 @@
 - **Supporting Detail:** Introduce FoodInsight as a case where AI agents handled much of the mechanical work while humans directed and validated.
 - **Proof / Evidence:** Case-specific numbers only: 29 stories, ~5000 LOC, ~20 human hours, ~3 days, edge AI system with Raspberry Pi and YOLO11.
 - **Speaker Angle:** Impressive, but disciplined. Avoid implying BMAD always produces this speed.
-- **Image Direction:** A before/after or compressed timeline from conventional delivery to structured AI-led delivery.
-- **AI Image Prompt:** `A split-screen transformation showing a long traditional software delivery timeline on one side and a compressed AI-orchestrated delivery flow on the other, modern engineering atmosphere, subtle hardware and code cues, no readable text, 16:9`
+- **Image Direction:** Use the image as a dramatic backdrop; the concrete metrics should remain separate as typography or stats blocks.
+- **AI Image Prompt:** `A sleek cinematic technology backdrop suggesting acceleration and compression of software delivery, subtle motion lines, engineering atmosphere, abstract timeline energy, generous negative space for metrics overlay, no readable text, 16:9`
 
 ### Slide 3 — Roadmap + "You Won't Lose Your Job"
 - **Goal:** Remove fear so the audience can listen rationally.
@@ -190,8 +199,8 @@
 - **Supporting Detail:** Show the contrast between ephemeral chat history and durable artifacts.
 - **Proof / Evidence:** Contrast table: improvisational, black-box, drifting context versus structured, versioned, auditable.
 - **Speaker Angle:** Crisp reframing.
-- **Image Direction:** Side-by-side contrast between casual AI chat and structured multi-agent workflow.
-- **AI Image Prompt:** `A split composition contrasting informal chat-based coding on one side with a structured artifact-driven multi-agent engineering workflow on the other, premium tech editorial style, no readable text, 16:9`
+- **Image Direction:** The image should only reinforce the contrast. The actual comparison must still be shown with labels or a table on top.
+- **AI Image Prompt:** `A split-scene editorial technology background, one side loose and chaotic, the other side orderly and structured, clean premium composition with strong contrast and clear negative space for overlay text, no readable text, 16:9`
 
 ### Slide 8 — BMAD Overview
 - **Goal:** Give the audience a stable one-sentence definition.
@@ -223,8 +232,8 @@
 - **Supporting Detail:** Show each core role and its main artifact or decision area.
 - **Proof / Evidence:** Mary -> Brief, John -> PRD, Winston -> Architecture, Sarah/PO -> alignment and sharding, Bob -> stories, Amelia -> code, Quinn -> QA.
 - **Speaker Angle:** Practical and human.
-- **Image Direction:** Team lineup with each role visually distinct.
-- **AI Image Prompt:** `A panoramic illustration of seven specialized AI delivery roles working as one engineering team, each character distinct by function but visually cohesive, modern enterprise style, no readable text, 16:9`
+- **Image Direction:** Use the image as a team panorama behind role labels or cards. The roles and artifacts should still be rendered as editable deck content.
+- **AI Image Prompt:** `A panoramic enterprise illustration of a coordinated software delivery team with seven distinct specialist archetypes, visually cohesive, calm and credible, arranged to leave room for role labels and captions, no readable text, 16:9`
 
 ### Slide 12 — Planning -> Execution
 - **Goal:** Show that BMAD moves through artifacts, not hand-wavy memory.
@@ -256,8 +265,8 @@
 - **Supporting Detail:** Highlight that durable docs reduce ambiguity and give each agent a clean source of truth.
 - **Proof / Evidence:** Mention brief, PRD, architecture, stories, tests, QA artifacts, and Git history.
 - **Speaker Angle:** Operational and evidence-focused.
-- **Image Direction:** Documents flowing into code and QA evidence.
-- **AI Image Prompt:** `An isometric pipeline of software planning documents transforming into implementation stories, tests, code, and QA evidence, sophisticated information design, no readable text, 16:9`
+- **Image Direction:** Use the image as a soft conceptual backdrop only if needed; the actual artifact chain should be drawn natively as a diagram.
+- **AI Image Prompt:** `A refined isometric background scene of documents and software artifacts moving through a clean pipeline, minimal and elegant, subdued enough to support overlaid labels and arrows, no readable text, 16:9`
 
 ### Slide 16 — Context Engineering
 - **Goal:** Explain why BMAD agents stay more aligned than generic chat sessions.
@@ -265,8 +274,8 @@
 - **Supporting Detail:** Step-file architecture loads fresh, focused instructions; sharding helps when large documents become unreliable or too expensive.
 - **Proof / Evidence:** Use the ideas of just-in-time loading and smaller context footprints. Avoid implying sharding is mandatory in every scenario.
 - **Speaker Angle:** Technical, accurate, not hypey.
-- **Image Direction:** Large monolithic document broken into focused shards feeding exact tasks.
-- **AI Image Prompt:** `A visual metaphor of a large software specification being intelligently split into precise modular context packets feeding implementation tasks, elegant systems aesthetic, no readable text, 16:9`
+- **Image Direction:** The image should act as metaphor only. The actual explanation of step-files, sharding, and context loading must stay in deck text/diagram form.
+- **AI Image Prompt:** `An elegant conceptual background of a large technical document separating into smaller modular units flowing toward focused implementation work, clean systems aesthetic, generous negative space for explanatory overlays, no readable text, 16:9`
 
 ### Slide 17 — C.O.R.E. Engine
 - **Goal:** Explain the philosophical heart of BMAD.
@@ -274,8 +283,8 @@
 - **Supporting Detail:** Proposal, critique, and refinement happen before and during execution, guided by humans and specialized agents.
 - **Proof / Evidence:** Anchor this as the antidote to first-thought bias.
 - **Speaker Angle:** Conceptual but grounded.
-- **Image Direction:** A recursive loop that visibly improves an idea through each pass.
-- **AI Image Prompt:** `A premium conceptual illustration of a recursive improvement loop moving through proposal, critique, and refinement, glowing circular flow, intelligent systems feel, no readable text, 16:9`
+- **Image Direction:** Use the image to create memory and atmosphere; the explicit `Proposal -> Critique -> Refinement` loop should still be built as deck typography or diagram.
+- **AI Image Prompt:** `A premium abstract background suggesting recursive reflection and iterative improvement, circular motion, intelligent systems atmosphere, elegant glow, open composition for overlay labels, no readable text, 16:9`
 
 ### Slide 18 — Advanced Toolkit
 - **Goal:** Expand the audience's sense of BMAD without losing the main thread.
@@ -291,8 +300,8 @@
 - **Supporting Detail:** Gates stop bad planning, adversarial review hunts for bugs, TDD validates behavior, traceability preserves evidence.
 - **Proof / Evidence:** Use a simple example such as an adversarial review catching an XSS risk before merge.
 - **Speaker Angle:** Serious, enterprise-ready.
-- **Image Direction:** Concentric or layered protection around code and artifacts.
-- **AI Image Prompt:** `A visual metaphor of four protective layers around a software system: planning gates, adversarial review, testing, and traceability, sleek enterprise security aesthetic, no readable text, 16:9`
+- **Image Direction:** The image should communicate protection and trust, but the four layers themselves should still be explicitly named in the slide content.
+- **AI Image Prompt:** `A sleek enterprise background image suggesting layered protection around a software system, clean concentric forms, trust and rigor, spacious composition for overlay labels and explanations, no readable text, 16:9`
 
 ### Slide 20 — A Dev's Day with BMAD
 - **Goal:** Remove the feeling that BMAD is too heavy for real use.
@@ -332,8 +341,8 @@
 - **Supporting Detail:** Translate results into outsourcing outcomes: more throughput, lower rework, easier onboarding, and better client trust.
 - **Proof / Evidence:** Keep the language directional unless exact KPI baselines are available.
 - **Speaker Angle:** Boardroom-ready.
-- **Image Direction:** A clean ROI board showing trust, speed, quality, and auditability.
-- **AI Image Prompt:** `A premium enterprise data-story visual showing the combined business impact of faster delivery, cleaner handoff, auditability, and client trust, polished editorial dashboard style, no readable text, 16:9`
+- **Image Direction:** If used, the image should simply elevate the business tone. The actual ROI pattern should be communicated through text, stats, and a clear synthesis diagram.
+- **AI Image Prompt:** `A polished enterprise editorial background evoking software delivery performance, trust, and strategic value, sophisticated boardroom-tech atmosphere, clean negative space for KPI and summary overlays, no readable text, 16:9`
 
 ### Slide 25 — Scale & Ecosystem
 - **Goal:** Prevent the audience from assuming BMAD is always heavyweight.
