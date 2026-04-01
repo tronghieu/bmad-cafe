@@ -28,6 +28,7 @@
 - A custom image should **support** the slide, not replace it.
 - The image should provide mood, metaphor, or visual texture while the actual message stays in text, diagrams, metrics, or artifacts.
 - Prompts should avoid trying to encode the entire slide meaning into one image.
+- Prefer **square compositions (1:1)** for generated images so they can be reused flexibly across different slide layouts.
 - For hero images, prefer compositions with **clear negative space** for headline, subhead, and proof overlays.
 - Avoid putting pseudo-infographics, fake UI, or embedded labels into the generated image. Those should be added in the presentation itself.
 
@@ -150,7 +151,7 @@
 - **Proof / Evidence:** If real code cannot be shown, use a synthetic example labeled internally as illustrative only.
 - **Speaker Angle:** Slightly accusatory, then empathetic. The line should feel uncomfortably familiar, not insulting.
 - **Image Direction:** Background mood image only. The accusation and takeaway must still come from slide copy.
-- **AI Image Prompt:** `A dark cinematic developer workspace with one laptop showing messy, chaotic source code, moody lighting, high contrast, realistic but restrained detail, generous negative space for headline overlay, no readable text, no logos, 16:9`
+- **AI Image Prompt:** `A dark cinematic developer workspace with one laptop showing messy, chaotic source code, moody lighting, high contrast, realistic but restrained detail, generous negative space for headline overlay, no readable text, no logos, square 1:1 composition`
 
 ### Slide 2 — The 3-Day Miracle
 - **Goal:** Prove that the alternative is not "slow and bureaucratic"; it can also be fast.
@@ -159,7 +160,7 @@
 - **Proof / Evidence:** Case-specific numbers only: 29 stories, ~5000 LOC, ~20 human hours, ~3 days, edge AI system with Raspberry Pi and YOLO11.
 - **Speaker Angle:** Impressive, but disciplined. Avoid implying BMAD always produces this speed.
 - **Image Direction:** Use the image as a dramatic backdrop; the concrete metrics should remain separate as typography or stats blocks.
-- **AI Image Prompt:** `A sleek cinematic technology backdrop suggesting acceleration and compression of software delivery, subtle motion lines, engineering atmosphere, abstract timeline energy, generous negative space for metrics overlay, no readable text, 16:9`
+- **AI Image Prompt:** `A sleek cinematic technology backdrop suggesting acceleration and compression of software delivery, subtle motion lines, engineering atmosphere, abstract timeline energy, generous negative space for metrics overlay, no readable text, square 1:1 composition`
 
 ### Slide 3 — Roadmap + "You Won't Lose Your Job"
 - **Goal:** Remove fear so the audience can listen rationally.
@@ -200,7 +201,7 @@
 - **Proof / Evidence:** Contrast table: improvisational, black-box, drifting context versus structured, versioned, auditable.
 - **Speaker Angle:** Crisp reframing.
 - **Image Direction:** The image should only reinforce the contrast. The actual comparison must still be shown with labels or a table on top.
-- **AI Image Prompt:** `A split-scene editorial technology background, one side loose and chaotic, the other side orderly and structured, clean premium composition with strong contrast and clear negative space for overlay text, no readable text, 16:9`
+- **AI Image Prompt:** `A split-scene editorial technology background, one side loose and chaotic, the other side orderly and structured, clean premium composition with strong contrast and clear negative space for overlay text, no readable text, square 1:1 composition`
 
 ### Slide 8 — BMAD Overview
 - **Goal:** Give the audience a stable one-sentence definition.
@@ -233,7 +234,7 @@
 - **Proof / Evidence:** Mary -> Brief, John -> PRD, Winston -> Architecture, Sarah/PO -> alignment and sharding, Bob -> stories, Amelia -> code, Quinn -> QA.
 - **Speaker Angle:** Practical and human.
 - **Image Direction:** Use the image as a team panorama behind role labels or cards. The roles and artifacts should still be rendered as editable deck content.
-- **AI Image Prompt:** `A panoramic enterprise illustration of a coordinated software delivery team with seven distinct specialist archetypes, visually cohesive, calm and credible, arranged to leave room for role labels and captions, no readable text, 16:9`
+- **AI Image Prompt:** `A cohesive enterprise illustration of a coordinated software delivery team with seven distinct specialist archetypes, calm and credible, arranged to leave room for role labels and captions, no readable text, square 1:1 composition`
 
 ### Slide 12 — Planning -> Execution
 - **Goal:** Show that BMAD moves through artifacts, not hand-wavy memory.
@@ -266,7 +267,7 @@
 - **Proof / Evidence:** Mention brief, PRD, architecture, stories, tests, QA artifacts, and Git history.
 - **Speaker Angle:** Operational and evidence-focused.
 - **Image Direction:** Use the image as a soft conceptual backdrop only if needed; the actual artifact chain should be drawn natively as a diagram.
-- **AI Image Prompt:** `A refined isometric background scene of documents and software artifacts moving through a clean pipeline, minimal and elegant, subdued enough to support overlaid labels and arrows, no readable text, 16:9`
+- **AI Image Prompt:** `A refined isometric background scene of documents and software artifacts moving through a clean pipeline, minimal and elegant, subdued enough to support overlaid labels and arrows, no readable text, square 1:1 composition`
 
 ### Slide 16 — Context Engineering
 - **Goal:** Explain why BMAD agents stay more aligned than generic chat sessions.
@@ -275,7 +276,7 @@
 - **Proof / Evidence:** Use the ideas of just-in-time loading and smaller context footprints. Avoid implying sharding is mandatory in every scenario.
 - **Speaker Angle:** Technical, accurate, not hypey.
 - **Image Direction:** The image should act as metaphor only. The actual explanation of step-files, sharding, and context loading must stay in deck text/diagram form.
-- **AI Image Prompt:** `An elegant conceptual background of a large technical document separating into smaller modular units flowing toward focused implementation work, clean systems aesthetic, generous negative space for explanatory overlays, no readable text, 16:9`
+- **AI Image Prompt:** `An elegant conceptual background of a large technical document separating into smaller modular units flowing toward focused implementation work, clean systems aesthetic, generous negative space for explanatory overlays, no readable text, square 1:1 composition`
 
 ### Slide 17 — C.O.R.E. Engine
 - **Goal:** Explain the philosophical heart of BMAD.
@@ -284,7 +285,7 @@
 - **Proof / Evidence:** Anchor this as the antidote to first-thought bias.
 - **Speaker Angle:** Conceptual but grounded.
 - **Image Direction:** Use the image to create memory and atmosphere; the explicit `Proposal -> Critique -> Refinement` loop should still be built as deck typography or diagram.
-- **AI Image Prompt:** `A premium abstract background suggesting recursive reflection and iterative improvement, circular motion, intelligent systems atmosphere, elegant glow, open composition for overlay labels, no readable text, 16:9`
+- **AI Image Prompt:** `A premium abstract background suggesting recursive reflection and iterative improvement, circular motion, intelligent systems atmosphere, elegant glow, open composition for overlay labels, no readable text, square 1:1 composition`
 
 ### Slide 18 — Advanced Toolkit
 - **Goal:** Expand the audience's sense of BMAD without losing the main thread.
@@ -301,7 +302,7 @@
 - **Proof / Evidence:** Use a simple example such as an adversarial review catching an XSS risk before merge.
 - **Speaker Angle:** Serious, enterprise-ready.
 - **Image Direction:** The image should communicate protection and trust, but the four layers themselves should still be explicitly named in the slide content.
-- **AI Image Prompt:** `A sleek enterprise background image suggesting layered protection around a software system, clean concentric forms, trust and rigor, spacious composition for overlay labels and explanations, no readable text, 16:9`
+- **AI Image Prompt:** `A sleek enterprise background image suggesting layered protection around a software system, clean concentric forms, trust and rigor, spacious composition for overlay labels and explanations, no readable text, square 1:1 composition`
 
 ### Slide 20 — A Dev's Day with BMAD
 - **Goal:** Remove the feeling that BMAD is too heavy for real use.
@@ -342,7 +343,7 @@
 - **Proof / Evidence:** Keep the language directional unless exact KPI baselines are available.
 - **Speaker Angle:** Boardroom-ready.
 - **Image Direction:** If used, the image should simply elevate the business tone. The actual ROI pattern should be communicated through text, stats, and a clear synthesis diagram.
-- **AI Image Prompt:** `A polished enterprise editorial background evoking software delivery performance, trust, and strategic value, sophisticated boardroom-tech atmosphere, clean negative space for KPI and summary overlays, no readable text, 16:9`
+- **AI Image Prompt:** `A polished enterprise editorial background evoking software delivery performance, trust, and strategic value, sophisticated boardroom-tech atmosphere, clean negative space for KPI and summary overlays, no readable text, square 1:1 composition`
 
 ### Slide 25 — Scale & Ecosystem
 - **Goal:** Prevent the audience from assuming BMAD is always heavyweight.
