@@ -29,7 +29,7 @@ Tải file PDF đã xuất sẵn tại [`docs/BMAD_Agentic_Engineering_Presentat
 
 ### Option 2: Chạy website (đầy đủ animation)
 ```bash
-cd presentation-web
+cd 26-mar-2026-presentation-web
 pnpm install
 pnpm dev
 ```
