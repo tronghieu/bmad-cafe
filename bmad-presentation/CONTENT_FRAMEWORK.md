@@ -16,6 +16,29 @@
 - The strongest BMAD themes are: specialized agents, artifact-driven workflow, context engineering, quality gates, and traceability.
 - The role of the human should stay explicit throughout: humans set direction, approve tradeoffs, define guardrails, and verify outputs.
 - Large productivity claims must be anchored to named case studies, not stated as universal guarantees.
+- AI-generated images should be used sparingly. Only hero or concept-heavy slides should get bespoke visuals; most slides should rely on typography, diagrams, screenshots, or real artifacts.
+
+---
+
+## Visual Asset Strategy
+
+### Slides That Merit Custom AI Images
+
+- Slide 1 — **Cold Open**
+- Slide 2 — **The 3-Day Miracle**
+- Slide 7 — **The Shift**
+- Slide 11 — **Meet the Core Team**
+- Slide 15 — **Artifact Flow**
+- Slide 16 — **Context Engineering**
+- Slide 17 — **C.O.R.E. Engine**
+- Slide 19 — **Quality: 4 Layers of Protection**
+- Slide 24 — **The Pattern: ROI for Outsourcing**
+
+### Slides That Should Prefer Non-AI Visuals
+
+- Use **typography-first layouts** for slides 3, 10, 27.
+- Use **tables, contrasts, and concise diagrams** for slides 5, 6, 9, 13, 14, 18, 25.
+- Use **real artifacts, code excerpts, file trees, QA evidence, and screenshots** for slides 4, 8, 12, 20, 21, 22, 23, 26.
 
 ---
 
@@ -135,8 +158,7 @@
 - **Supporting Detail:** State that humans still define scope, architecture, constraints, approval, and quality judgment.
 - **Proof / Evidence:** Link back to BMAD's human-amplification philosophy from the notebook.
 - **Speaker Angle:** Calm, direct, not defensive.
-- **Image Direction:** Minimal roadmap layout plus a strong line about the developer's new role.
-- **AI Image Prompt:** `A premium editorial tech presentation scene showing a developer moving from coding alone to orchestrating a structured AI team, clean composition, optimistic but serious tone, no readable text, 16:9`
+- **Preferred Visual Source:** Typography-first roadmap, chapter navigation, and one strong framing statement about the developer's evolving role.
 
 ### Slide 4 — Vibe Coding: The Reality
 - **Goal:** Make the failure mode concrete.
@@ -144,8 +166,7 @@
 - **Supporting Detail:** Narrate the arc: first prompt works, second prompt patches, tenth prompt corrupts the system.
 - **Proof / Evidence:** Show one example of iterative patching producing inconsistent code or broken assumptions.
 - **Speaker Angle:** Honest, not dismissive. Respect why developers do it.
-- **Image Direction:** A progression from clean excitement to growing chaos.
-- **AI Image Prompt:** `A visual sequence of a developer chatting with an AI assistant as code evolves from clean prototype to unstable patchwork, increasing visual chaos across the frame, cinematic software engineering style, no readable text, 16:9`
+- **Preferred Visual Source:** Use a real or reconstructed sequence of chat snippets, code diffs, and resulting mess rather than a synthetic hero image.
 
 ### Slide 5 — 3 Project Killers
 - **Goal:** Name the core BMAD problem set.
@@ -153,8 +174,7 @@
 - **Supporting Detail:** Give one sentence and one recognizable symptom for each.
 - **Proof / Evidence:** Context drift = ignored earlier constraint, hallucination debt = fabricated dependency or logic, no architecture = every fix collides with another part.
 - **Speaker Angle:** Diagnostic, like naming a disease before treatment.
-- **Image Direction:** Three collapsing forces or dominoes knocking each other over.
-- **AI Image Prompt:** `An abstract enterprise illustration of three collapsing system risks represented as domino cascades: context drift, hallucination debt, and missing architecture, dramatic but clean, no readable text, 16:9`
+- **Preferred Visual Source:** A simple three-column comparison or domino diagram built natively in the presentation.
 
 ### Slide 6 — The Real Cost for Outsourcing
 - **Goal:** Tie BMAD to business pain, not just engineering aesthetics.
@@ -162,8 +182,7 @@
 - **Supporting Detail:** Rework kills estimates, undocumented AI code slows onboarding, unstable output damages client confidence.
 - **Proof / Evidence:** Use common outsourcing pain points rather than overclaiming precise percentages unless sourced.
 - **Speaker Angle:** Commercial and operational.
-- **Image Direction:** Delivery pressure, bugs, and handoff friction affecting a client-facing team.
-- **AI Image Prompt:** `A polished enterprise software delivery scene showing stressed developers, bug reports, delayed handoff, and a concerned client review meeting, trustworthy corporate style, no readable text, 16:9`
+- **Preferred Visual Source:** KPI-style cost framing, icons, and short evidence statements are stronger than a generic business illustration.
 
 ### Slide 7 — The Shift
 - **Goal:** Introduce BMAD as a change in operating model.
@@ -180,8 +199,7 @@
 - **Supporting Detail:** Mention open-source nature, but keep the definition focused on the method.
 - **Proof / Evidence:** Prefer the NotebookLM infographic or a simple diagram over too much copy.
 - **Speaker Angle:** Foundational and precise.
-- **Image Direction:** High-level visual overview of BMAD components.
-- **AI Image Prompt:** `A clean high-level ecosystem diagram of a structured AI-driven software development method, showing agents, documents, review loops, and delivery flow, elegant enterprise infographic style, no readable text, 16:9`
+- **Preferred Visual Source:** Use the existing NotebookLM infographic or a custom diagram derived from it.
 
 ### Slide 9 — 5 Pillars
 - **Goal:** Give the audience a mental model they can remember.
@@ -189,8 +207,7 @@
 - **Supporting Detail:** Pillars should be explained as: specialized agents, lifecycle discipline, artifact contracts, context engineering, and reflection plus governance.
 - **Proof / Evidence:** Each pillar gets one short line and one practical consequence.
 - **Speaker Angle:** Structural and memorable.
-- **Image Direction:** Five strong pillars or five connected modules supporting one system.
-- **AI Image Prompt:** `A modern conceptual illustration of five connected pillars supporting an AI-native software engineering system, modular geometric composition, premium infographic feel, no readable text, 16:9`
+- **Preferred Visual Source:** A native five-pillar diagram or five-card system is preferable to an AI-generated metaphor.
 
 ### Slide 10 — Zoom-in Preview
 - **Goal:** Reset attention before the deep dive.
@@ -198,8 +215,7 @@
 - **Supporting Detail:** Use this as a transition, not as a content-heavy slide.
 - **Proof / Evidence:** No evidence needed; this is a framing slide.
 - **Speaker Angle:** Brief and directional.
-- **Image Direction:** Three-part preview: team, workflow, proof.
-- **AI Image Prompt:** `A sleek editorial triptych composition hinting at team roles, process flow, and proof metrics, clean visual hierarchy, no readable text, 16:9`
+- **Preferred Visual Source:** Use a minimal chapter preview with text and simple symbols only.
 
 ### Slide 11 — Meet the Core Team
 - **Goal:** Make BMAD feel like a real delivery team, not abstract terminology.
@@ -216,8 +232,7 @@
 - **Supporting Detail:** Walk the chain from project brief to PRD to architecture to story to code to QA.
 - **Proof / Evidence:** Use file names and handoff verbs, not just agent names.
 - **Speaker Angle:** Concrete and procedural.
-- **Image Direction:** A relay race of documents becoming implementation.
-- **AI Image Prompt:** `An elegant systems flow showing documents passing from analysis to planning to architecture to stories to implementation and QA, glowing nodes and clean connective lines, no readable text, 16:9`
+- **Preferred Visual Source:** A native flow diagram with actual artifact names is better than an illustrative image.
 
 ### Slide 13 — Why Specialization Wins
 - **Goal:** Justify the multi-agent design.
@@ -225,8 +240,7 @@
 - **Supporting Detail:** Emphasize smaller context surface, clearer role contracts, and stronger reviewability.
 - **Proof / Evidence:** Tie back to reduced hallucination and better artifact quality.
 - **Speaker Angle:** Rational, not theatrical.
-- **Image Direction:** Compare one overloaded brain to a coordinated specialist team.
-- **AI Image Prompt:** `A conceptual comparison between one overloaded general intelligence and a coordinated team of focused specialist intelligences, premium editorial technology illustration, no readable text, 16:9`
+- **Preferred Visual Source:** Use a contrast table or split-frame comparison with role cards and responsibility boundaries.
 
 ### Slide 14 — 4-Phase Lifecycle
 - **Goal:** Give the audience BMAD's primary operating sequence.
@@ -234,8 +248,7 @@
 - **Supporting Detail:** Analysis creates strategic clarity, Planning creates requirement clarity, Solutioning creates technical clarity, Implementation turns one story at a time into validated output.
 - **Proof / Evidence:** Use the exact phase names consistently.
 - **Speaker Angle:** Clear and didactic.
-- **Image Direction:** A four-stage flow with strong directional movement.
-- **AI Image Prompt:** `A polished four-stage workflow diagram for AI-driven product delivery, moving from analysis to planning to solutioning to implementation, modern enterprise design, no readable text, 16:9`
+- **Preferred Visual Source:** A clean native four-stage lifecycle diagram with explicit phase names.
 
 ### Slide 15 — Artifact Flow
 - **Goal:** Show what BMAD actually produces before code.
@@ -270,8 +283,7 @@
 - **Supporting Detail:** Advanced Elicitation sharpens thinking, Party Mode enables multi-agent discussion, Expansion Packs add domain-specific teams, BMad Builder creates custom agents.
 - **Proof / Evidence:** Present each as one sentence plus one use case.
 - **Speaker Angle:** Exciting but contained.
-- **Image Direction:** A modular toolbox or expandable ecosystem around the BMAD core.
-- **AI Image Prompt:** `A futuristic modular toolkit orbiting a central AI engineering core, representing advanced reasoning, multi-agent collaboration, domain packs, and builder tools, polished enterprise illustration, no readable text, 16:9`
+- **Preferred Visual Source:** Use a modular feature map or icon grid rather than a generated illustration.
 
 ### Slide 19 — Quality: 4 Layers of Protection
 - **Goal:** Show why BMAD output is more governable.
@@ -288,8 +300,7 @@
 - **Supporting Detail:** Morning story selection, focused context load, implementation, test pass, QA review, commit with evidence.
 - **Proof / Evidence:** Show the loop as practical, not ceremonial.
 - **Speaker Angle:** Grounded and reassuring.
-- **Image Direction:** A day-in-the-life sequence across one engineer's workflow.
-- **AI Image Prompt:** `A realistic day-in-the-life montage of a developer orchestrating AI-assisted story delivery through planning context, coding, testing, review, and commit, modern product engineering style, no readable text, 16:9`
+- **Preferred Visual Source:** Use a day timeline with concrete actions, files, and review checkpoints.
 
 ### Slide 21 — Case 1: QuickBuy — How It Works
 - **Goal:** Demonstrate BMAD as a delivery structure.
@@ -297,8 +308,7 @@
 - **Supporting Detail:** Walk through the generated artifacts and the continuity from business brief to QA output.
 - **Proof / Evidence:** Use screenshots or excerpts of actual artifacts if available.
 - **Speaker Angle:** Concrete and demonstrative.
-- **Image Direction:** A case-study board showing artifacts in sequence.
-- **AI Image Prompt:** `A polished case-study composition showing an e-commerce project flowing from brief and PRD to architecture, stories, code, and QA review, board-like layout, no readable text, 16:9`
+- **Preferred Visual Source:** Real BMAD artifacts, file snapshots, and excerpted QA evidence should drive this slide.
 
 ### Slide 22 — Case 2: FoodInsight — How Fast
 - **Goal:** Demonstrate speed with credible scope.
@@ -306,8 +316,7 @@
 - **Supporting Detail:** Show the system scope: edge device, backend, and PWA. Stress that humans still provided oversight and judgment.
 - **Proof / Evidence:** 29 stories, 98 story points, ~5000 LOC, ~20 human hours, ~3 days.
 - **Speaker Angle:** Strong proof, carefully qualified.
-- **Image Direction:** Edge AI food detection plus compressed delivery metrics.
-- **AI Image Prompt:** `An enterprise-grade edge AI food monitoring scene with a smart camera, object detection overlays, and an adjacent compressed delivery timeline, modern technical visual, no readable text, 16:9`
+- **Preferred Visual Source:** Prefer real project screenshots, architecture snippets, and metrics layout. Only use AI imagery if no real visual exists.
 
 ### Slide 23 — Case 3: Software Archaeology — How It Scales
 - **Goal:** Show BMAD applies to messy brownfield work, not just greenfield demos.
@@ -315,8 +324,7 @@
 - **Supporting Detail:** Emphasize onboarding acceleration, faster system comprehension, and traceable modernization.
 - **Proof / Evidence:** Use sourced numbers carefully and identify them as case-specific estimates where needed.
 - **Speaker Angle:** Enterprise and architectural.
-- **Image Direction:** A tangled legacy system mapped into clear flows and knowledge layers.
-- **AI Image Prompt:** `A sophisticated visualization of a chaotic legacy software system being mapped into clear architecture, dependencies, and traceable flows, modern systems-analysis style, no readable text, 16:9`
+- **Preferred Visual Source:** Use system maps, dependency graphs, or real modernization artifacts rather than a synthetic hero visual.
 
 ### Slide 24 — The Pattern: ROI for Outsourcing
 - **Goal:** Convert three stories into one business pattern.
@@ -333,8 +341,7 @@
 - **Supporting Detail:** Quick Flow for small changes, BMAD for product work, Enterprise for heavily governed systems; then show domain expansion through packs and builder tools.
 - **Proof / Evidence:** Mention the scale-adaptive tracks and ecosystem examples.
 - **Speaker Angle:** Flexible and pragmatic.
-- **Image Direction:** A ladder or continuum from quick fix to enterprise with ecosystem branches.
-- **AI Image Prompt:** `A visual scale from lightweight software fixes to full enterprise engineering governance, with modular ecosystem branches for domain-specific teams, premium infographic style, no readable text, 16:9`
+- **Preferred Visual Source:** Use a clean scale ladder or maturity model diagram built in the deck.
 
 ### Slide 26 — Get Started Now
 - **Goal:** Convert curiosity into a safe first step.
@@ -342,8 +349,7 @@
 - **Supporting Detail:** Install, choose track, create the first brief/spec, and run a small contained workflow.
 - **Proof / Evidence:** Use the install command and starter resources, but frame adoption as an experiment with guardrails.
 - **Speaker Angle:** Practical and low-friction.
-- **Image Direction:** Terminal command, starter workflow, and onboarding momentum.
-- **AI Image Prompt:** `A sleek terminal-inspired onboarding scene showing a software team beginning a structured AI workflow, subtle command-line cues, polished product atmosphere, no readable text, 16:9`
+- **Preferred Visual Source:** Use the actual install command, QR code, and starter path as the visual.
 
 ### Slide 27 — Closing
 - **Goal:** End on a memorable principle, not a product pitch.
@@ -351,8 +357,7 @@
 - **Supporting Detail:** Reframe BMAD as the bridge from AI toys to AI tools.
 - **Proof / Evidence:** No new evidence; this is synthesis and invitation.
 - **Speaker Angle:** Confident, reflective, forward-looking.
-- **Image Direction:** Calm, credible ending visual with human and AI aligned around delivery.
-- **AI Image Prompt:** `A cinematic closing scene showing human developers and AI systems working in disciplined alignment toward a shared software delivery goal, elegant and optimistic, no readable text, 16:9`
+- **Preferred Visual Source:** End with strong typography and a final principle, not a fresh image.
 
 ---
 
