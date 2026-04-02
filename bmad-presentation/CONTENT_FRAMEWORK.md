@@ -1,23 +1,59 @@
-# BMAD Method: Agentic Engineering Presentation Framework
+# BMAD Method Presentation Framework
 
-**Duration:** 60 - 80 Minutes (67 min content + Q&A)  
-**Format:** Interactive Presentation Website  
+**Duration:** 60 - 80 Minutes (core talk + Q&A)  
+**Format:** Interactive slide-by-slide presentation website  
 **Audience:** Developers at a tech outsourcing company  
-**Core Message:** BMAD does not replace developers. It upgrades them into AI orchestrators working with structure, artifacts, and guardrails.  
-**Narrative Arc:** Hook -> Pain -> Overview -> Heroes -> Method -> Proof -> Action  
-**Slides:** 27 (~2.5 min average per slide)
+**Language:** Vietnamese presentation copy  
+**Core Message:** BMAD does not replace developers. It gives software teams a more structured way to work with AI through roles, documents, checkpoints, and human review.  
+**Narrative Arc:** Hook -> Problem -> Overview -> Heroes -> Method -> Proof -> Action  
+**Implemented Deck Size:** 37 slides total
+
+### Current Deck Structure
+
+- 1 opening title slide
+- 7 section divider slides
+- 27 core content slides
+- 1 Q&A slide
+- 1 thank-you slide
 
 ---
 
 ## Strategic Framing
 
-- BMAD should be presented as a **spec-driven development method**, not as a bundle of prompts.
+- BMAD should be presented as a **structured development method**, not as a bundle of prompts.
 - The core contrast is **vibe coding vs agentic engineering**.
 - The strongest BMAD themes are: specialized agents, artifact-driven workflow, context engineering, quality gates, and traceability.
 - The role of the human should stay explicit throughout: humans set direction, approve tradeoffs, define guardrails, and verify outputs.
 - Large productivity claims must be anchored to named case studies, not stated as universal guarantees.
 - AI-generated images should be used sparingly. Only hero or concept-heavy slides should get bespoke visuals; most slides should rely on typography, diagrams, screenshots, or real artifacts.
 - In this deck, an image is **supporting atmosphere or metaphor**, not the carrier of the full argument. Every slide still needs explicit copy, proof, and structure.
+- The implemented copy should stay **technical, precise, and low-hype**. Avoid slogans, magic-language, or marketing tone.
+
+---
+
+## Implementation Alignment Review
+
+### What Stayed Aligned
+
+- The implemented deck still follows the same 7-act narrative arc from the original framework.
+- The 27 core slides still cover the same BMAD concepts: problem framing, BMAD overview, agent roles, artifact handoff, context engineering, C.O.R.E., quality layers, case studies, and adoption path.
+- The same 9 slides still use bespoke supporting AI-generated visuals.
+- The implementation keeps the rule that images are supporting visuals, not the main carrier of meaning.
+
+### What Changed During Implementation
+
+- The rendered deck now includes **extra structural slides**: one opening title slide, seven section-divider slides, plus Q&A and thank-you closing slides.
+- Slide copy was rewritten in **Vietnamese** and adjusted to be less theatrical and more engineering-oriented.
+- Several slide titles were renamed for clarity in presentation mode.
+- Asset filenames were changed from numeric order to **descriptive kebab-case names**.
+- The live deck is now the source of truth for phrasing tone; it is more restrained than this original framework draft.
+
+### Main Content Deltas to Keep in Mind
+
+- The framework draft uses more English and more “keynote language”; the implementation uses more operational Vietnamese and less hype.
+- The original draft says BMAD should be framed as **spec-driven development**; the implementation softened that into **a structured way of working with AI through roles, documents, and checkpoints**.
+- The case-study framing in the implementation is more conservative: speed claims are still present, but the copy now emphasizes scope, control, and traceability.
+- The closing message in the implementation is less manifesto-like and more practical: AI is useful when placed inside a structured process with human responsibility.
 
 ---
 
@@ -34,15 +70,15 @@
 
 ### Slides That Merit Custom AI Images
 
-- Slide 1 — **Cold Open**
-- Slide 2 — **The 3-Day Miracle**
-- Slide 7 — **The Shift**
-- Slide 11 — **Meet the Core Team**
-- Slide 15 — **Artifact Flow**
-- Slide 16 — **Context Engineering**
-- Slide 17 — **C.O.R.E. Engine**
-- Slide 19 — **Quality: 4 Layers of Protection**
-- Slide 24 — **The Pattern: ROI for Outsourcing**
+- Slide 1 — **Cú Mở Đầu** -> `cold-open-code-chaos.png`
+- Slide 2 — **Ba Ngày** -> `foodinsight-delivery-speed.png`
+- Slide 7 — **Sự Chuyển Dịch** -> `prompting-to-orchestration-shift.png`
+- Slide 11 — **Đội Hình Cốt Lõi** -> `core-agent-team.png`
+- Slide 15 — **Dòng Chảy Tài Liệu** -> `artifact-flow-pipeline.png`
+- Slide 16 — **Kỹ Thuật Tổ Chức Ngữ Cảnh** -> `context-engineering-shards.png`
+- Slide 17 — **Vòng Lặp C.O.R.E.** -> `core-reflection-loop.png`
+- Slide 19 — **Chất Lượng: 4 Lớp Phòng Thủ** -> `quality-layered-defense.png`
+- Slide 24 — **Mẫu Số Chung** -> `outsourcing-roi-pattern.png`
 
 ### Slides That Should Prefer Non-AI Visuals
 
@@ -52,97 +88,118 @@
 
 ---
 
-## ACT 1: THE HOOK (~7 min, 3 slides)
+## Implemented Slide List
+
+### Structural Slides
+
+| Render Order | Slide | Purpose |
+|---|---|---|
+| 1 | **BMAD Method** | Opening title slide |
+| 2 | **Mở Bài** | Section divider |
+| 6 | **Vấn Đề** | Section divider |
+| 11 | **Tổng Quan** | Section divider |
+| 15 | **Đội Hình** | Section divider |
+| 19 | **Phương Pháp** | Section divider |
+| 27 | **Minh Chứng** | Section divider |
+| 32 | **Hành Động** | Section divider |
+| 36 | **Hỏi & Đáp** | Q&A slide |
+| 37 | **Cảm ơn** | Final thank-you slide |
+
+---
+
+## ACT 1: THE HOOK (~7 min, 3 core slides)
 
 **Theme:** *Shock, relevance, and immediate reframing*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 1 | **Cold Open** | Open on ugly AI-generated spaghetti code and the question: *"Who wrote this? ...You did. Three days ago."* The point is not that AI is bad. The point is that unstructured AI work creates code nobody wants to maintain. | 2 min |
-| 2 | **The 3-Day Miracle** | Tease the FoodInsight case: 29 stories, ~5000 LOC, ~20 human hours, ~3 days. Frame it carefully: *"This is not autopilot. This is what happens when AI is given structure."* | 2.5 min |
-| 3 | **Roadmap + "You Won't Lose Your Job"** | Show the 7-part journey and disarm fear early: *"BMAD does not turn developers into spectators. It turns them into orchestrators, reviewers, and system-level decision makers."* | 2.5 min |
+| 1 | **Cú Mở Đầu** | Frame the problem as uncontrolled AI-generated code: the issue is not AI itself, but lack of structure, reviewability, and maintenance discipline. | 2 min |
+| 2 | **Ba Ngày** | Use FoodInsight to show that speed matters only when scope and control stay explicit: 29 stories, ~5000 LOC, ~20 human hours, ~3 days. | 2.5 min |
+| 3 | **Lộ Trình Và Vai Trò Mới** | Show the 7-part journey and clarify early that BMAD changes how developers work with AI rather than replacing developer responsibility. | 2.5 min |
 
 ---
 
-## ACT 2: THE PROBLEM (~10 min, 4 slides)
+## ACT 2: THE PROBLEM (~10 min, 4 core slides)
 
 **Theme:** *Why current AI coding breaks down in real software work*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 4 | **Vibe Coding: The Reality** | Tell the short story: day 1 looks magical, week 2 becomes patching, week 4 nobody trusts the code. Emphasize that vibe coding is great for prototypes, weak for maintainable systems. | 2.5 min |
-| 5 | **3 Project Killers** | Define the three failure modes clearly: **Context Drift** = the AI forgets earlier constraints, **Hallucination Debt** = fake logic and bad assumptions accumulate, **No Architecture** = code grows without a durable blueprint. | 2.5 min |
-| 6 | **The Real Cost for Outsourcing** | Translate the three killers into delivery pain: rework, bug-heavy handoff, slow onboarding, weak client trust, and expensive maintenance. | 2.5 min |
-| 7 | **The Shift** | Reframe the discipline change: from talking to one general AI in a long chat, to orchestrating a team of specialized agents through artifacts and checkpoints. | 2.5 min |
+| 4 | **Làm Theo Cảm Hứng** | Explain that fast prototyping often turns into accumulated patching, low trust in code, and difficult handoff. | 2.5 min |
+| 5 | **Ba Kẻ Giết Dự Án** | Define the three recurring structural problems: context drift, hallucination debt, and lack of architecture. | 2.5 min |
+| 6 | **Tác Động Trong Outsourcing** | Translate those technical problems into delivery pain: rework, slow onboarding, weak handoff, and lower client confidence. | 2.5 min |
+| 7 | **Sự Chuyển Dịch** | Reframe the change from long chat-based prompting to structured orchestration through documents, roles, and checkpoints. | 2.5 min |
 
 ---
 
-## ACT 3: BMAD OVERVIEW (~8 min, 3 slides)
+## ACT 3: BMAD OVERVIEW (~8 min, 3 core slides)
 
 **Theme:** *What BMAD is before we zoom in*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 8 | **BMAD Overview** | Define BMAD as a structured method for agile AI-driven development that replaces black-box prompting with explicit artifacts, specialized roles, and versioned collaboration. | 3 min |
-| 9 | **5 Pillars** | Introduce the five pillars as: **Specialized Agents**, **4-Phase Lifecycle**, **Artifact Contracts**, **Context Engineering**, and **Reflection + Governance** through C.O.R.E. and review gates. | 2.5 min |
-| 10 | **Zoom-in Preview** | Set up the rest of the talk: *"We will look at the team, the workflow, the controls, and finally the proof that this works in practice."* | 2.5 min |
+| 8 | **Tổng Quan Về BMAD** | Define BMAD as a structured method built on roles, documents, context discipline, and traceability. | 3 min |
+| 9 | **Năm Trụ Cột** | Present the five pillars as specialized agents, lifecycle discipline, artifact contracts, context engineering, and reflection plus governance. | 2.5 min |
+| 10 | **Nhìn Gần Hơn** | Set up the rest of the talk around team structure, workflow, control points, and practical proof. | 2.5 min |
 
 ---
 
-## ACT 4: THE WHO — Agent Team (~8 min, 3 slides)
+## ACT 4: THE WHO — Agent Team (~8 min, 3 core slides)
 
 **Theme:** *Meet the AI workforce and the artifact handoff chain*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 11 | **Meet the Core Team** | Present the delivery chain accurately: Mary (Analyst), John (PM), Winston (Architect), Sarah/PO, Bob (Scrum Master), Amelia (Developer), Quinn (QA). Mention the Orchestrator/BMad Master as a facilitation layer, not the main delivery artifact owner. | 2.5 min |
-| 12 | **Planning -> Execution** | Show the artifact handoff: Brief -> PRD -> Architecture -> Sharded stories -> Code -> QA evidence. Emphasize that BMAD moves context through documents, not memory alone. | 3 min |
-| 13 | **Why Specialization Wins** | Make the logic explicit: smaller scope per agent means tighter context, clearer responsibility, fewer hallucinations, and more reviewable output. | 2.5 min |
+| 11 | **Đội Hình Cốt Lõi** | Present the delivery chain accurately: Mary (Analyst), John (PM), Winston (Architect), Sarah/PO, Bob (Scrum Master), Amelia (Developer), Quinn (QA). | 2.5 min |
+| 12 | **Từ Lập Kế Hoạch Đến Thực Thi** | Show the artifact handoff: Brief -> PRD -> Architecture -> Story -> Code -> QA evidence. | 3 min |
+| 13 | **Vì Sao Chuyên Biệt Hóa Hiệu Quả** | Make the logic explicit: smaller scope per role means tighter context, clearer responsibility, and more reviewable output. | 2.5 min |
 
 ---
 
-## ACT 5: THE HOW — Process + Advanced Power + Quality (~17 min, 7 slides)
+## ACT 5: THE HOW — Process + Advanced Power + Quality (~17 min, 7 core slides)
 
 **Theme:** *How BMAD actually works*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 14 | **4-Phase Lifecycle** | Explain the four phases as a sequence of questions: **Why** (Analysis), **What** (Planning), **How** (Solutioning), **Build and Verify** (Implementation). | 2 min |
-| 15 | **Artifact Flow** | Expand the artifact chain into the real BMAD flow: `project-brief.md -> PRD.md -> architecture.md -> epic/story files -> code/tests/review artifacts`. | 2.5 min |
-| 16 | **Context Engineering** | Explain BMAD's context strategy carefully: step-file architecture and focused artifact loading are the default discipline; document sharding is a key technique when large docs become unreliable or expensive to load. | 2.5 min |
-| 17 | **C.O.R.E. Engine** | Present C.O.R.E. as the reflection loop behind BMAD: **Proposal -> Critique -> Refinement**. The value is not automation for its own sake, but forcing better thinking before and during execution. | 2.5 min |
-| 18 | **Advanced Toolkit** | Frame advanced features as accelerators on top of the method: **Advanced Elicitation**, **Party Mode**, **Expansion Packs**, **BMad Builder**. Make it clear these extend BMAD; they do not replace the core workflow. | 2 min |
-| 19 | **Quality: 4 Layers of Protection** | Teach the quality stack as a control system: **Readiness Gates**, **Adversarial Review**, **TDD and Continuous Validation**, **Traceability and Audit Trail**. | 3 min |
-| 20 | **A Dev's Day with BMAD** | Bring it back to practice: pick one story, load focused context, implement within guardrails, run tests, receive QA review, commit evidence. BMAD embeds quality into the normal loop. | 2.5 min |
+| 14 | **Vòng Đời 4 Giai Đoạn** | Explain the four phases as analysis, planning, solutioning, and implementation. | 2 min |
+| 15 | **Dòng Chảy Tài Liệu** | Expand the BMAD flow as `project-brief.md -> PRD.md -> architecture.md -> story files -> code/tests/review artifacts`. | 2.5 min |
+| 16 | **Kỹ Thuật Tổ Chức Ngữ Cảnh** | Explain step-file architecture, focused artifact loading, and document sharding when large docs become unreliable. | 2.5 min |
+| 17 | **Vòng Lặp C.O.R.E.** | Present C.O.R.E. as a reflection loop: Proposal -> Critique -> Refinement. | 2.5 min |
+| 18 | **Bộ Công Cụ Mở Rộng** | Frame Advanced Elicitation, Party Mode, Expansion Packs, and BMad Builder as optional extensions on top of the method. | 2 min |
+| 19 | **Chất Lượng: 4 Lớp Phòng Thủ** | Teach the quality stack as readiness gates, adversarial review, TDD + validation, and traceability. | 3 min |
+| 20 | **Một Ngày Làm Việc Với BMAD** | Bring it back to daily practice: choose one story, load focused context, implement, test, receive QA review, and commit evidence. | 2.5 min |
 
 ---
 
-## ACT 6: THE PROOF (~10 min, 4 slides)
+## ACT 6: THE PROOF (~10 min, 4 core slides)
 
 **Theme:** *Three kinds of proof: structure, speed, and scale*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 21 | **Case 1: QuickBuy — How It Works** | Use QuickBuy to answer: *"What does BMAD produce?"* Focus on the artifact chain and the clarity of handoff from planning to implementation. | 2.5 min |
-| 22 | **Case 2: FoodInsight — How Fast** | Use FoodInsight to answer: *"How much can structured AI compress delivery?"* Anchor the case to its specifics: edge AI, Raspberry Pi, YOLO11, 29 stories, ~20 human hours, ~3 days. | 2.5 min |
-| 23 | **Case 3: Software Archaeology — How It Scales** | Use Software Archaeology to answer: *"Can BMAD help with large, messy, existing systems?"* Emphasize legacy understanding, faster onboarding, and traceable modernization. | 2.5 min |
-| 24 | **The Pattern: ROI for Outsourcing** | Synthesize the cases into outsourcing value: faster delivery, clearer artifacts, lower rework, better audits, easier onboarding, stronger client confidence. | 2.5 min |
+| 21 | **Ca 1: QuickBuy — Khả Năng Quan Sát** | Use QuickBuy to show BMAD as a delivery structure with visible artifacts and clearer handoff. | 2.5 min |
+| 22 | **Ca 2: FoodInsight — Tốc Độ** | Use FoodInsight to anchor speed claims to a concrete scope: edge AI, Raspberry Pi, YOLO11, 29 stories, ~20 human hours, ~3 days. | 2.5 min |
+| 23 | **Ca 3: Khảo Cổ Phần Mềm — Hệ Thống Cũ** | Use Software Archaeology to show BMAD helping with legacy understanding, onboarding, and traceable modernization. | 2.5 min |
+| 24 | **Mẫu Số Chung** | Synthesize the cases into outsourcing value: faster delivery, clearer artifacts, lower rework, easier onboarding, and stronger client confidence. | 2.5 min |
 
 ---
 
-## ACT 7: FUTURE + ECOSYSTEM + CTA (~7 min, 3 slides)
+## ACT 7: FUTURE + ECOSYSTEM + CTA (~7 min, 3 core slides)
 
 **Theme:** *How teams adopt BMAD without pretending everything is enterprise-scale*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 25 | **Scale & Ecosystem** | Show that BMAD is not one-size-fits-all: Quick Flow for small work, standard BMAD for product features, Enterprise for heavily governed systems. Then show extension through expansion packs and builder tools. | 2.5 min |
-| 26 | **Get Started Now** | Keep the CTA operational: install, choose the right track, create the first brief/spec, and let the team see BMAD through one controlled pilot rather than a full rewrite. | 2 min |
-| 27 | **Closing** | Land the talk with disciplined optimism: *"The future is not developers versus AI. It is disciplined humans leading structured AI systems."* | 2.5 min |
+| 25 | **Quy Mô Và Hệ Sinh Thái** | Show that BMAD is not one-size-fits-all: Quick Flow for small work, BMAD standard for product features, Enterprise for heavily governed systems. | 2.5 min |
+| 26 | **Bắt Đầu Ngay** | Keep the CTA operational: install, choose the right track, create the first brief/spec, and run one controlled pilot. | 2 min |
+| 27 | **Kết Lại** | End on a practical message: AI is more useful when it sits inside a structured workflow with human responsibility. | 2.5 min |
 
 ---
 
 ## Detailed Slide Content
+
+> Note: this section still documents the **27 core conceptual slides**. The live deck uses the updated Vietnamese render titles listed in the act tables above, plus structural wrapper slides such as the opening title, section dividers, Q&A, and thank-you.
 
 ### Slide 1 — Cold Open
 - **Goal:** Make the audience feel the pain of uncontrolled AI coding in under 10 seconds.
@@ -407,5 +464,5 @@
 
 ---
 
-*Framework v0.6 — 27 slides, updated with BMAD-specific content detail and image prompts*  
-*Revised using NotebookLM research on BMAD Method*
+*Framework v0.7 — aligned to the implemented 37-slide deck structure while preserving the 27 core content slides as the conceptual backbone*  
+*Updated after implementation review against the current React presentation build and NotebookLM research on BMAD Method*
