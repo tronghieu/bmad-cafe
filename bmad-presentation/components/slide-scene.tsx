@@ -1,0 +1,426 @@
+import Image from "next/image";
+import type { ReactNode } from "react";
+import { getKindIcon, Icon } from "@/components/presentation-icons";
+
+export type SlideSceneKind =
+  | "section"
+  | "hero"
+  | "editorial"
+  | "contrast"
+  | "systems"
+  | "case"
+  | "closing";
+
+export type SlideVisualVariant =
+  | "default"
+  | "contrast-killers"
+  | "contrast-shift"
+  | "contrast-specialization"
+  | "systems-phases"
+  | "systems-flow"
+  | "systems-context"
+  | "systems-core"
+  | "systems-layers";
+
+export type SlideSceneProps = {
+  kind: SlideSceneKind;
+  kicker: string;
+  title: string;
+  headline: string;
+  headlineWidth?: "base" | "wide" | "full";
+  summary: string;
+  bullets?: string[];
+  proof?: string[];
+  image?: string;
+  imagePriority?: boolean;
+  imageSize?: "base" | "large" | "xlarge";
+  visualLabel?: string;
+  hideVisual?: boolean;
+  visualVariant?: SlideVisualVariant;
+  visualContent?: ReactNode;
+};
+
+export function SlideScene({
+  kind,
+  kicker,
+  title,
+  headline,
+  headlineWidth = "base",
+  summary,
+  bullets,
+  proof,
+  image,
+  imagePriority,
+  imageSize = "base",
+  visualLabel,
+  hideVisual,
+  visualVariant = "default",
+  visualContent,
+}: SlideSceneProps) {
+  const hasVisual =
+    !hideVisual &&
+    kind !== "section" &&
+    kind !== "closing" &&
+    (Boolean(image) || visualVariant !== "default" || Boolean(visualContent));
+
+  return (
+    <article className={`slide-sheet kind-${kind} ${hasVisual ? "" : "is-visual-hidden"}`}>
+      <div className="slide-column slide-column-copy">
+        <div className="sheet-header animate-in">
+          <p className="sheet-kicker">
+            <Icon name={getKindIcon(kind)} className="meta-icon" />
+            <span>{kicker}</span>
+          </p>
+          <p className="sheet-title">
+            <Icon name="spark" className="meta-icon" />
+            <span>{title}</span>
+          </p>
+        </div>
+
+        <h2 className={`slide-headline headline-width-${headlineWidth} animate-in`}>{headline}</h2>
+        <p className="slide-summary animate-in">{summary}</p>
+
+        {bullets?.length ? (
+          <ul className="slide-bullets">
+            {bullets.map((bullet, index) => (
+              <li
+                key={bullet}
+                className="animate-in"
+                style={{ animationDelay: `${120 + index * 70}ms` }}
+              >
+                <Icon name="bullet" className="list-icon" />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+
+        {proof?.length ? (
+          <div className="proof-cluster">
+            {proof.map((item, index) => (
+              <div
+                key={item}
+                className="proof-chip animate-in"
+                style={{ animationDelay: `${180 + index * 55}ms` }}
+              >
+                <Icon name="proof" className="chip-icon" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        ) : null}
+      </div>
+
+      {hasVisual ? (
+        <div className="slide-column slide-column-visual animate-visual">
+          {visualContent ?? (
+            <SlideVisual
+              image={image}
+              title={title}
+              kind={kind}
+              imageSize={imageSize}
+              visualLabel={visualLabel}
+              visualVariant={visualVariant}
+              imagePriority={imagePriority}
+            />
+          )}
+        </div>
+      ) : null}
+    </article>
+  );
+}
+
+function SlideVisual({
+  image,
+  title,
+  kind,
+  imageSize,
+  visualLabel,
+  visualVariant,
+  imagePriority,
+}: {
+  image?: string;
+  title: string;
+  kind: SlideSceneKind;
+  imageSize: "base" | "large" | "xlarge";
+  visualLabel?: string;
+  visualVariant: SlideVisualVariant;
+  imagePriority?: boolean;
+}) {
+  if (kind === "section" || kind === "closing") {
+    return null;
+  }
+
+  if (visualVariant === "contrast-killers" || visualVariant === "contrast-shift" || visualVariant === "contrast-specialization") {
+    const panels =
+      visualVariant === "contrast-killers"
+        ? [
+            { title: "Lệch ngữ cảnh", body: "Các ràng buộc ban đầu biến mất dần khi cuộc hội thoại kéo dài." },
+            { title: "Nợ ảo giác", body: "Giả định sai tích lũy lại và khiến các lần sửa sau ngày càng đắt." },
+            { title: "Không có kiến trúc", body: "Mỗi bản vá đều đụng vào phần khác vì hệ thống không có điểm tựa." },
+          ]
+        : visualVariant === "contrast-shift"
+          ? [
+              { title: "Làm theo cảm hứng", body: "Lịch sử chat mỏng manh, ứng biến liên tục, hành vi như hộp đen." },
+              { title: "Điều phối có phương pháp", body: "Tài liệu bền vững, vai trò rõ ràng, quy trình có thể lặp lại và rà soát." },
+            ]
+          : [
+              { title: "Một phiên AI tổng quát", body: "Phạm vi quá rộng, sở hữu mờ nhạt, ngữ cảnh bị dàn mỏng." },
+              { title: "Các agent BMAD chuyên biệt", body: "Phạm vi hẹp hơn, trách nhiệm rõ hơn, đầu ra dễ rà soát hơn." },
+            ];
+
+    return (
+      <>
+        <div className="contrast-board">
+          {panels.map((panel, index) => (
+            <div
+              key={panel.title}
+              className="contrast-card animate-visual"
+              style={{ animationDelay: `${index * 80}ms` }}
+            >
+              <span>{panel.title}</span>
+              <p>{panel.body}</p>
+            </div>
+          ))}
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`contrast-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+        <VisualCaption label={visualLabel} />
+      </>
+    );
+  }
+
+  if (visualVariant === "systems-phases") {
+    return (
+      <>
+        <div className="systems-board systems-phases">
+          {[
+            { phase: "Phân tích", icon: "search" as const },
+            { phase: "Lập kế hoạch", icon: "plan" as const },
+            { phase: "Thiết kế giải pháp", icon: "layers" as const },
+            { phase: "Triển khai", icon: "code" as const },
+          ].map((item, index) => (
+            <div
+              key={item.phase}
+              className="phase-card animate-visual"
+              style={{ animationDelay: `${index * 90}ms` }}
+            >
+              <div className="phase-card-meta">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Icon name={item.icon} className="board-icon" />
+              </div>
+              <strong>{item.phase}</strong>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
+
+  if (visualVariant === "systems-flow") {
+    return (
+      <>
+        <div className="systems-board systems-flow">
+          {["Brief", "PRD", "Kiến trúc", "Story", "Mã nguồn", "QA"].map((item, index) => (
+            <div
+              key={item}
+              className="flow-node animate-visual"
+              style={{ animationDelay: `${index * 75}ms` }}
+            >
+              <span>{item}</span>
+            </div>
+          ))}
+          <div className="flow-line" />
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`systems-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+      </>
+    );
+  }
+
+  if (visualVariant === "systems-context") {
+    return (
+      <>
+        <div className="systems-board context-board">
+          <div className="context-column animate-visual is-source">
+            <div className="context-column-icon">
+              <Icon name="layers" className="board-icon" />
+            </div>
+            <div>
+              <span>Ngữ cảnh đầu vào quá lớn</span>
+              <p>Tài liệu nguyên khối làm mô hình quá tải và dễ trôi khỏi ràng buộc ban đầu.</p>
+            </div>
+          </div>
+          <div className="context-arrow animate-visual" />
+          <div className="context-shards">
+            {[
+              { label: "Tệp từng bước", icon: "workflow" as const },
+              { label: "Mảnh đầu việc", icon: "scope" as const },
+              { label: "Mảnh ràng buộc", icon: "shield" as const },
+            ].map((item, index) => (
+              <div
+                key={item.label}
+                className="context-shard animate-visual"
+                style={{ animationDelay: `${90 + index * 80}ms` }}
+              >
+                <Icon name={item.icon} className="board-icon" />
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`systems-image systems-image-small image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+      </>
+    );
+  }
+
+  if (visualVariant === "systems-core") {
+    return (
+      <>
+        <div className="systems-board core-board">
+          {[
+            { label: "Đề xuất", icon: "lightbulb" as const },
+            { label: "Phản biện", icon: "review" as const },
+            { label: "Tinh chỉnh", icon: "wrench" as const },
+          ].map((item, index) => (
+            <div
+              key={item.label}
+              className="core-orbit animate-visual"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <Icon name={item.icon} className="board-icon" />
+              <span>{item.label}</span>
+            </div>
+          ))}
+          <div className="core-center animate-visual">C.O.R.E.</div>
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`systems-image systems-image-faint image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+      </>
+    );
+  }
+
+  if (visualVariant === "systems-layers") {
+    return (
+      <>
+        <div className="systems-board layers-board">
+          {[
+            { label: "Implementation Readiness", icon: "shield" as const },
+            { label: "Adversarial Review", icon: "review" as const },
+            { label: "TDD + Verification", icon: "checklist" as const },
+            { label: "Traceability Pack", icon: "trace" as const },
+          ].map((item, index) => (
+              <div
+                key={item.label}
+                className="layer-band animate-visual"
+                style={{ animationDelay: `${index * 90}ms` }}
+              >
+                <Icon name={item.icon} className="board-icon" />
+                <span>{item.label}</span>
+              </div>
+            ),
+          )}
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`systems-image systems-image-faint image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+      </>
+    );
+  }
+
+  if (kind === "case") {
+    return (
+      <>
+        <div className="case-board">
+          {image ? (
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`case-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
+          ) : null}
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      {image ? (
+        <>
+          <div className={`visual-figure image-size-${imageSize}`}>
+            <Image
+              src={image}
+              alt={visualLabel ?? title}
+              fill
+              sizes="(max-width: 960px) 84vw, 36vw"
+              priority={imagePriority}
+              className="visual-image"
+            />
+          </div>
+        </>
+      ) : null}
+    </>
+  );
+}
+
+function FigureImage({
+  src,
+  alt,
+  className,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  className: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className={className}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 960px) 84vw, 34vw"
+        className="visual-image"
+        priority={priority}
+      />
+    </div>
+  );
+}
+
+function VisualCaption({ label }: { label?: string }) {
+  void label;
+  return null;
+}
