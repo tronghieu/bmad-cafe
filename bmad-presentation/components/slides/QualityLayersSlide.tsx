@@ -9,5 +9,6 @@ export default createSceneSlide({
   bullets: ["Cổng sẵn sàng", "Rà soát phản biện", "TDD + kiểm chứng", "Khả năng truy vết"],
   visualLabel: "Ảnh nền gợi cảm giác nhiều lớp phòng thủ",
   image: "/assets/quality-layered-defense.png",
+  imageSize: "xlarge",
   visualVariant: "systems-layers",
 });

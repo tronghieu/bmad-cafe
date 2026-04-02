@@ -9,4 +9,5 @@ export default createSceneSlide({
   proof: ["Thông lượng cao hơn", "Làm lại ít hơn", "Vào việc dễ hơn", "Niềm tin tốt hơn"],
   visualLabel: "Ảnh bổ trợ sắc thái kinh doanh đi kèm phần tổng hợp KPI",
   image: "/assets/outsourcing-roi-pattern.png",
+  imageSize: "xlarge",
 });

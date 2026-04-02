@@ -292,7 +292,7 @@ select {
 .visual-placeholder {
   position: relative;
   aspect-ratio: 1;
-  width: min(100%, 40rem);
+  width: min(100%, 46rem);
   border-radius: 1.8rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(240, 232, 222, 0.96));
@@ -330,7 +330,7 @@ select {
 .systems-board,
 .case-board,
 .visual-caption {
-  width: min(100%, 40rem);
+  width: min(100%, 46rem);
 }
 
 .contrast-board {
@@ -350,12 +350,30 @@ select {
 .contrast-image {
   position: relative;
   aspect-ratio: 1;
-  width: 15rem;
+  width: 18rem;
   justify-self: end;
   border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid rgba(24, 21, 18, 0.08);
   box-shadow: 0 16px 32px rgba(74, 55, 42, 0.1);
+}
+
+.visual-figure.image-size-large,
+.visual-placeholder.image-size-large {
+  width: min(100%, 50rem);
+}
+
+.visual-figure.image-size-xlarge,
+.visual-placeholder.image-size-xlarge {
+  width: min(100%, 54rem);
+}
+
+.contrast-image.image-size-large {
+  width: 21rem;
+}
+
+.contrast-image.image-size-xlarge {
+  width: 24rem;
 }
 
 .systems-board {
@@ -507,7 +525,7 @@ select {
   position: absolute;
   right: 1.25rem;
   bottom: 1.25rem;
-  width: 12.5rem;
+  width: 16.5rem;
   aspect-ratio: 1;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -516,11 +534,29 @@ select {
 }
 
 .systems-image-small {
-  width: 10rem;
+  width: 13rem;
+}
+
+.systems-image.image-size-large,
+.case-image.image-size-large {
+  width: 19rem;
+}
+
+.systems-image.image-size-xlarge,
+.case-image.image-size-xlarge {
+  width: 22rem;
+}
+
+.systems-image-small.image-size-large {
+  width: 15rem;
+}
+
+.systems-image-small.image-size-xlarge {
+  width: 17rem;
 }
 
 .systems-image-faint {
-  opacity: 0.88;
+  opacity: 0.92;
 }
 
 .layers-board {
@@ -817,7 +853,7 @@ select {
   .contrast-image,
   .systems-image,
   .case-image {
-    width: 8.75rem;
+    width: 10.25rem;
   }
 
   .footer-controls {

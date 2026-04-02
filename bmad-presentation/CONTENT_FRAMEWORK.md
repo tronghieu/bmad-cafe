@@ -2,7 +2,7 @@
 
 **Duration:** 60 - 80 Minutes (core talk + Q&A)  
 **Format:** Interactive slide-by-slide presentation website  
-**Audience:** Developers at a tech outsourcing company  
+**Audience:** Developers and technical teams exploring structured ways to build software with AI  
 **Language:** Vietnamese presentation copy  
 **Core Message:** BMAD does not replace developers. It gives software teams a more structured way to work with AI through roles, documents, checkpoints, and human review.  
 **Narrative Arc:** Hook -> Problem -> Overview -> Heroes -> Method -> Proof -> Action  
@@ -21,7 +21,7 @@
 ## Strategic Framing
 
 - BMAD should be presented as a **structured development method**, not as a bundle of prompts.
-- The core contrast is **vibe coding vs agentic engineering**.
+- The core contrast is **vibe coding vs context engineering**.
 - The strongest BMAD themes are: specialized agents, artifact-driven workflow, context engineering, quality gates, and traceability.
 - The role of the human should stay explicit throughout: humans set direction, approve tradeoffs, define guardrails, and verify outputs.
 - Large productivity claims must be anchored to named case studies, not stated as universal guarantees.
@@ -52,7 +52,7 @@
 
 - The framework draft uses more English and more “keynote language”; the implementation uses more operational Vietnamese and less hype.
 - The original draft says BMAD should be framed as **spec-driven development**; the implementation softened that into **a structured way of working with AI through roles, documents, and checkpoints**.
-- The case-study framing in the implementation is more conservative: speed claims are still present, but the copy now emphasizes scope, control, and traceability.
+- The case-study framing in the implementation is more conservative: speed claims are still present, but the copy now emphasizes scope, control, traceability, and engineering discipline.
 - The closing message in the implementation is less manifesto-like and more practical: AI is useful when placed inside a structured process with human responsibility.
 
 ---
@@ -107,28 +107,28 @@
 
 ---
 
-## ACT 1: THE HOOK (~7 min, 3 core slides)
+## ACT 1: VIBE CODING VÀ ĐIỂM GÃY (~7 min, 3 core slides)
 
-**Theme:** *Shock, relevance, and immediate reframing*
+**Theme:** *Vì sao vibe coding hấp dẫn lúc đầu nhưng dễ mất kiểm soát khi scope tăng*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
 | 1 | **Cú Mở Đầu** | Frame the problem as uncontrolled AI-generated code: the issue is not AI itself, but lack of structure, reviewability, and maintenance discipline. | 2 min |
-| 2 | **Ba Ngày** | Use FoodInsight to show that speed matters only when scope and control stay explicit: 29 stories, ~5000 LOC, ~20 human hours, ~3 days. | 2.5 min |
-| 3 | **Lộ Trình Và Vai Trò Mới** | Show the 7-part journey and clarify early that BMAD changes how developers work with AI rather than replacing developer responsibility. | 2.5 min |
+| 2 | **Vì Sao Vibe Coding Hấp Dẫn** | Acknowledge the strengths fairly: fast start, low setup, short feedback loops, and strong fit for prototypes, experiments, and small tasks. | 2.5 min |
+| 3 | **Điểm Gãy Của Vibe Coding** | Show where it stops scaling: chat history becomes unreliable, patching accumulates, control effort rises, and the work leaves few durable artifacts behind. | 2.5 min |
 
 ---
 
-## ACT 2: THE PROBLEM (~10 min, 4 core slides)
+## ACT 2: VIBE CODING VS CONTEXT ENGINEERING (~10 min, 4 core slides)
 
-**Theme:** *Why current AI coding breaks down in real software work*
+**Theme:** *Two operating models for working with AI in software delivery*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 4 | **Làm Theo Cảm Hứng** | Explain that fast prototyping often turns into accumulated patching, low trust in code, and difficult handoff. | 2.5 min |
-| 5 | **Ba Kẻ Giết Dự Án** | Define the three recurring structural problems: context drift, hallucination debt, and lack of architecture. | 2.5 min |
-| 6 | **Tác Động Trong Outsourcing** | Translate those technical problems into delivery pain: rework, slow onboarding, weak handoff, and lower client confidence. | 2.5 min |
-| 7 | **Sự Chuyển Dịch** | Reframe the change from long chat-based prompting to structured orchestration through documents, roles, and checkpoints. | 2.5 min |
+| 4 | **Vibe Coding Là Gì** | Define vibe coding neutrally as rapid AI-assisted coding driven by continuous conversation and low upfront structure. | 2.5 min |
+| 5 | **Context Engineering Là Gì** | Define context engineering as organizing the right context, at the right time, for the right scope through artifacts, roles, and controlled steps. | 2.5 min |
+| 6 | **So Sánh Tổng Quan** | Compare the two models across source of context, decision memory, task boundaries, review style, and repeatability. | 2.5 min |
+| 7 | **Khi Nào Mỗi Cách Phù Hợp** | Show that vibe coding is useful for quick exploration, while context engineering is stronger when work needs stability, coordination, and reviewability. | 2.5 min |
 
 ---
 
@@ -181,7 +181,7 @@
 | 21 | **Ca 1: QuickBuy — Khả Năng Quan Sát** | Use QuickBuy to show BMAD as a delivery structure with visible artifacts and clearer handoff. | 2.5 min |
 | 22 | **Ca 2: FoodInsight — Tốc Độ** | Use FoodInsight to anchor speed claims to a concrete scope: edge AI, Raspberry Pi, YOLO11, 29 stories, ~20 human hours, ~3 days. | 2.5 min |
 | 23 | **Ca 3: Khảo Cổ Phần Mềm — Hệ Thống Cũ** | Use Software Archaeology to show BMAD helping with legacy understanding, onboarding, and traceable modernization. | 2.5 min |
-| 24 | **Mẫu Số Chung** | Synthesize the cases into outsourcing value: faster delivery, clearer artifacts, lower rework, easier onboarding, and stronger client confidence. | 2.5 min |
+| 24 | **Mẫu Số Chung** | Synthesize the cases into a broader engineering pattern: faster delivery, clearer artifacts, lower rework, easier onboarding, and stronger trust in the output. | 2.5 min |
 
 ---
 
@@ -210,55 +210,54 @@
 - **Image Direction:** Background mood image only. The accusation and takeaway must still come from slide copy.
 - **AI Image Prompt:** `A dark cinematic developer workspace with one laptop showing messy, chaotic source code, moody lighting, high contrast, realistic but restrained detail, generous negative space for headline overlay, no readable text, no logos, square 1:1 composition`
 
-### Slide 2 — The 3-Day Miracle
-- **Goal:** Prove that the alternative is not "slow and bureaucratic"; it can also be fast.
-- **Takeaway:** Structure is what makes AI speed usable.
-- **Supporting Detail:** Introduce FoodInsight as a case where AI agents handled much of the mechanical work while humans directed and validated.
-- **Proof / Evidence:** Case-specific numbers only: 29 stories, ~5000 LOC, ~20 human hours, ~3 days, edge AI system with Raspberry Pi and YOLO11.
-- **Speaker Angle:** Impressive, but disciplined. Avoid implying BMAD always produces this speed.
-- **Image Direction:** Use the image as a dramatic backdrop; the concrete metrics should remain separate as typography or stats blocks.
-- **AI Image Prompt:** `A sleek cinematic technology backdrop suggesting acceleration and compression of software delivery, subtle motion lines, engineering atmosphere, abstract timeline energy, generous negative space for metrics overlay, no readable text, square 1:1 composition`
+### Slide 2 — Why Vibe Coding Feels Good
+- **Goal:** Be fair before criticizing.
+- **Takeaway:** Vibe coding is attractive because it minimizes setup and turns ideas into working output quickly.
+- **Supporting Detail:** Call out short feedback loops, low ceremony, and strong usefulness for prototypes, scripts, and exploratory work.
+- **Proof / Evidence:** Use recognizable situations: UI experiments, code spikes, one-off automation, quick debugging attempts.
+- **Speaker Angle:** Respectful and balanced.
+- **Preferred Visual Source:** Typography-first comparison of where vibe coding shines, supported by a few concise examples.
 
-### Slide 3 — Roadmap + "You Won't Lose Your Job"
-- **Goal:** Remove fear so the audience can listen rationally.
-- **Takeaway:** BMAD changes the developer role upward, not outward.
-- **Supporting Detail:** State that humans still define scope, architecture, constraints, approval, and quality judgment.
-- **Proof / Evidence:** Link back to BMAD's human-amplification philosophy from the notebook.
-- **Speaker Angle:** Calm, direct, not defensive.
-- **Preferred Visual Source:** Typography-first roadmap, chapter navigation, and one strong framing statement about the developer's evolving role.
+### Slide 3 — The Breaking Point of Vibe Coding
+- **Goal:** Show why the same method becomes fragile as work grows.
+- **Takeaway:** When scope expands, chat-driven coding loses reliability because decisions are no longer durable or easy to review.
+- **Supporting Detail:** Focus on drifting constraints, patch accumulation, rising control effort, and lack of artifacts that survive beyond the session.
+- **Proof / Evidence:** Use one concrete arc: early prompts help, later prompts fight each other, and the operator spends more time steering than building.
+- **Speaker Angle:** Technical and direct.
+- **Preferred Visual Source:** Use a reconstructed chat-plus-diff sequence or a native progression diagram showing how small success turns into instability.
 
-### Slide 4 — Vibe Coding: The Reality
-- **Goal:** Make the failure mode concrete.
-- **Takeaway:** Vibe coding is great for demos, dangerous as a default delivery method.
-- **Supporting Detail:** Narrate the arc: first prompt works, second prompt patches, tenth prompt corrupts the system.
-- **Proof / Evidence:** Show one example of iterative patching producing inconsistent code or broken assumptions.
-- **Speaker Angle:** Honest, not dismissive. Respect why developers do it.
-- **Preferred Visual Source:** Use a real or reconstructed sequence of chat snippets, code diffs, and resulting mess rather than a synthetic hero image.
+### Slide 4 — What Vibe Coding Optimizes For
+- **Goal:** Define vibe coding without reducing it to a joke.
+- **Takeaway:** Vibe coding optimizes for speed of interaction, not long-lived shared context.
+- **Supporting Detail:** Explain it as coding through continuous conversation, with the chat session acting as the primary memory and coordination layer.
+- **Proof / Evidence:** Show characteristics such as low upfront structure, broad session scope, and heavy dependence on operator steering.
+- **Speaker Angle:** Neutral and descriptive.
+- **Preferred Visual Source:** Use a concise table or stacked comparison cards.
 
-### Slide 5 — 3 Project Killers
-- **Goal:** Name the core BMAD problem set.
-- **Takeaway:** Context drift, hallucination debt, and missing architecture are not random bugs; they are structural failure modes.
-- **Supporting Detail:** Give one sentence and one recognizable symptom for each.
-- **Proof / Evidence:** Context drift = ignored earlier constraint, hallucination debt = fabricated dependency or logic, no architecture = every fix collides with another part.
-- **Speaker Angle:** Diagnostic, like naming a disease before treatment.
-- **Preferred Visual Source:** A simple three-column comparison or domino diagram built natively in the presentation.
+### Slide 5 — What Context Engineering Optimizes For
+- **Goal:** Introduce the alternative model clearly before naming BMAD.
+- **Takeaway:** Context engineering organizes the right context, at the right time, for the right task boundary.
+- **Supporting Detail:** Artifacts hold decisions, steps narrow scope, and roles or workflows keep context loading deliberate.
+- **Proof / Evidence:** Use concepts such as `project brief`, `PRD`, `architecture`, `story`, `review evidence`, or focused step files.
+- **Speaker Angle:** Precise and explanatory.
+- **Preferred Visual Source:** Use a native diagram that shows context being partitioned and loaded intentionally rather than remembered informally.
 
-### Slide 6 — The Real Cost for Outsourcing
-- **Goal:** Tie BMAD to business pain, not just engineering aesthetics.
-- **Takeaway:** Poor AI discipline destroys margins and trust in outsourcing.
-- **Supporting Detail:** Rework kills estimates, undocumented AI code slows onboarding, unstable output damages client confidence.
-- **Proof / Evidence:** Use common outsourcing pain points rather than overclaiming precise percentages unless sourced.
-- **Speaker Angle:** Commercial and operational.
-- **Preferred Visual Source:** KPI-style cost framing, icons, and short evidence statements are stronger than a generic business illustration.
-
-### Slide 7 — The Shift
-- **Goal:** Introduce BMAD as a change in operating model.
-- **Takeaway:** The shift is from prompting a chatbot to orchestrating an engineered workflow.
-- **Supporting Detail:** Show the contrast between ephemeral chat history and durable artifacts.
-- **Proof / Evidence:** Contrast table: improvisational, black-box, drifting context versus structured, versioned, auditable.
-- **Speaker Angle:** Crisp reframing.
-- **Image Direction:** The image should only reinforce the contrast. The actual comparison must still be shown with labels or a table on top.
+### Slide 6 — Vibe Coding vs Context Engineering
+- **Goal:** Make the distinction memorable in one frame.
+- **Takeaway:** The biggest difference is not model quality; it is how context is organized, preserved, and reviewed.
+- **Supporting Detail:** Compare source of truth, decision memory, task boundaries, review timing, and repeatability.
+- **Proof / Evidence:** Use a direct table with clear contrasts such as `chat history vs artifacts` and `single broad session vs scoped steps`.
+- **Speaker Angle:** Crisp and comparative.
+- **Image Direction:** The image should only support the contrast. The actual comparison must still live in a native table or diagram.
 - **AI Image Prompt:** `A split-scene editorial technology background, one side loose and chaotic, the other side orderly and structured, clean premium composition with strong contrast and clear negative space for overlay text, no readable text, square 1:1 composition`
+
+### Slide 7 — When Each Model Fits
+- **Goal:** Avoid turning the talk into BMAD propaganda.
+- **Takeaway:** Vibe coding is useful for exploration; context engineering is stronger when work needs stability, coordination, and durable review.
+- **Supporting Detail:** Put prototypes, spikes, and short-lived tasks on one side; multi-step features, shared systems, and review-heavy work on the other.
+- **Proof / Evidence:** Use practical scenarios rather than ideology.
+- **Speaker Angle:** Balanced and pragmatic.
+- **Preferred Visual Source:** A side-by-side fit matrix or decision table.
 
 ### Slide 8 — BMAD Overview
 - **Goal:** Give the audience a stable one-sentence definition.
@@ -393,13 +392,13 @@
 - **Speaker Angle:** Enterprise and architectural.
 - **Preferred Visual Source:** Use system maps, dependency graphs, or real modernization artifacts rather than a synthetic hero visual.
 
-### Slide 24 — The Pattern: ROI for Outsourcing
-- **Goal:** Convert three stories into one business pattern.
-- **Takeaway:** BMAD creates delivery speed with more evidence and less chaos.
-- **Supporting Detail:** Translate results into outsourcing outcomes: more throughput, lower rework, easier onboarding, and better client trust.
+### Slide 24 — The Pattern: Shared Engineering Value
+- **Goal:** Convert three stories into one engineering pattern.
+- **Takeaway:** BMAD creates speed with more evidence, clearer handoff, and less chaos.
+- **Supporting Detail:** Translate the cases into practical outcomes: more throughput, lower rework, easier onboarding, and higher trust in the result.
 - **Proof / Evidence:** Keep the language directional unless exact KPI baselines are available.
-- **Speaker Angle:** Boardroom-ready.
-- **Image Direction:** If used, the image should simply elevate the business tone. The actual ROI pattern should be communicated through text, stats, and a clear synthesis diagram.
+- **Speaker Angle:** Strategic but still engineering-focused.
+- **Image Direction:** If used, the image should simply elevate the synthesis. The actual pattern should be communicated through text, stats, and a clear comparison diagram.
 - **AI Image Prompt:** `A polished enterprise editorial background evoking software delivery performance, trust, and strategic value, sophisticated boardroom-tech atmosphere, clean negative space for KPI and summary overlays, no readable text, square 1:1 composition`
 
 ### Slide 25 — Scale & Ecosystem
@@ -464,5 +463,5 @@
 
 ---
 
-*Framework v0.7 — aligned to the implemented 37-slide deck structure while preserving the 27 core content slides as the conceptual backbone*  
-*Updated after implementation review against the current React presentation build and NotebookLM research on BMAD Method*
+*Framework v0.8 — revised to de-emphasize outsourcing framing and strengthen the early comparison between vibe coding and context engineering*  
+*Updated after implementation review against the current React presentation build, the source presentation web, and NotebookLM research on BMAD Method*

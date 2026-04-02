@@ -10,4 +10,5 @@ export default createSceneSlide({
   visualLabel: "Hỗn loạn trong mã nguồn như một tín hiệu cảnh báo",
   image: "/assets/cold-open-code-chaos.png",
   imagePriority: true,
+  imageSize: "xlarge",
 });

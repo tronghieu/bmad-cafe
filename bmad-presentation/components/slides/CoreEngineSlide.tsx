@@ -9,5 +9,6 @@ export default createSceneSlide({
   proof: ["Đề xuất", "Phản biện", "Tinh chỉnh"],
   visualLabel: "Ảnh trừu tượng hỗ trợ cho vòng chữ và sơ đồ nhịp lặp",
   image: "/assets/core-reflection-loop.png",
+  imageSize: "large",
   visualVariant: "systems-core",
 });

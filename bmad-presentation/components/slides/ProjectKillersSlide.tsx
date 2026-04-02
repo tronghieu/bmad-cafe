@@ -1,16 +1,15 @@
 import { createSceneSlide } from "@/components/slides/create-scene-slide";
 
 export default createSceneSlide({
-  kind: "contrast",
+  kind: "editorial",
   kicker: "Phần 2",
-  title: "Ba Kẻ Giết Dự Án",
-  headline: "Ba lỗi này thường xuất hiện cùng nhau khi quy trình không kiểm soát được ngữ cảnh và quyết định kỹ thuật.",
-  summary: "Chúng không phải lỗi riêng lẻ, mà là hệ quả của cùng một cách làm việc thiếu cấu trúc.",
+  title: "Context Engineering Là Gì",
+  headline: "Thay vì để AI tự nhớ mọi thứ qua chat, context engineering nạp đúng ngữ cảnh cho đúng bước và đúng phạm vi.",
+  summary: "Tài liệu giữ quyết định, bước làm thu hẹp nhiệm vụ, và ranh giới công việc giúp đầu ra dễ rà soát hơn.",
   bullets: [
-    "Lệch ngữ cảnh: AI quên các ràng buộc trước đó",
-    "Nợ ảo giác: giả định sai tích lũy thành nợ kỹ thuật",
-    "Không có kiến trúc: sửa chỗ này đổ chỗ khác",
+    "Artifact giữ vai trò nguồn sự thật bền vững",
+    "Mỗi bước chỉ nhận phần ngữ cảnh cần thiết",
+    "Vai trò và checkpoint làm rõ trách nhiệm và cách review",
   ],
-  proof: ["Bỏ quên ràng buộc", "Bịa ra logic", "Các bản vá va vào nhau"],
-  visualVariant: "contrast-killers",
+  proof: ["Đúng ngữ cảnh", "Đúng thời điểm", "Đúng phạm vi"],
 });

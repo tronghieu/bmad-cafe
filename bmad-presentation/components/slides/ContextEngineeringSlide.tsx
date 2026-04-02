@@ -13,5 +13,6 @@ export default createSceneSlide({
   ],
   visualLabel: "Ảnh ẩn dụ đi kèm sơ đồ giải thích trực diện",
   image: "/assets/context-engineering-shards.png",
+  imageSize: "large",
   visualVariant: "systems-context",
 });

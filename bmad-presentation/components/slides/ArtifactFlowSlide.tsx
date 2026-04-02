@@ -16,5 +16,6 @@ export default createSceneSlide({
   ],
   visualLabel: "Ưu tiên sơ đồ ở phía trước, ảnh nền chỉ hỗ trợ",
   image: "/assets/artifact-flow-pipeline.png",
+  imageSize: "xlarge",
   visualVariant: "systems-flow",
 });

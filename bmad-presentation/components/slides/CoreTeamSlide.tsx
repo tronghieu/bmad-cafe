@@ -17,4 +17,5 @@ export default createSceneSlide({
   ],
   visualLabel: "Ảnh nhóm với nhãn vai trò đặt chồng lên",
   image: "/assets/core-agent-team.png",
+  imageSize: "xlarge",
 });

@@ -32,6 +32,7 @@ export type SlideSceneProps = {
   proof?: string[];
   image?: string;
   imagePriority?: boolean;
+  imageSize?: "base" | "large" | "xlarge";
   visualLabel?: string;
   hideVisual?: boolean;
   visualVariant?: SlideVisualVariant;
@@ -48,6 +49,7 @@ export function SlideScene({
   proof,
   image,
   imagePriority,
+  imageSize = "base",
   visualLabel,
   hideVisual,
   visualVariant = "default",
@@ -112,6 +114,7 @@ export function SlideScene({
             image={image}
             title={title}
             kind={kind}
+            imageSize={imageSize}
             visualLabel={visualLabel}
             visualVariant={visualVariant}
             imagePriority={imagePriority}
@@ -126,6 +129,7 @@ function SlideVisual({
   image,
   title,
   kind,
+  imageSize,
   visualLabel,
   visualVariant,
   imagePriority,
@@ -133,6 +137,7 @@ function SlideVisual({
   image?: string;
   title: string;
   kind: SlideSceneKind;
+  imageSize: "base" | "large" | "xlarge";
   visualLabel?: string;
   visualVariant: SlideVisualVariant;
   imagePriority?: boolean;
@@ -173,7 +178,12 @@ function SlideVisual({
             </div>
           ))}
           {image ? (
-            <FigureImage src={image} alt={visualLabel ?? title} className="contrast-image" priority={imagePriority} />
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`contrast-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
           ) : null}
         </div>
         <VisualCaption label={visualLabel} />
@@ -216,7 +226,12 @@ function SlideVisual({
           ))}
           <div className="flow-line" />
           {image ? (
-            <FigureImage src={image} alt={visualLabel ?? title} className="systems-image" priority={imagePriority} />
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`systems-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
           ) : null}
         </div>
         <VisualCaption label={visualLabel} />
@@ -248,7 +263,7 @@ function SlideVisual({
             <FigureImage
               src={image}
               alt={visualLabel ?? title}
-              className="systems-image systems-image-small"
+              className={`systems-image systems-image-small image-size-${imageSize}`}
               priority={imagePriority}
             />
           ) : null}
@@ -276,7 +291,7 @@ function SlideVisual({
             <FigureImage
               src={image}
               alt={visualLabel ?? title}
-              className="systems-image systems-image-faint"
+              className={`systems-image systems-image-faint image-size-${imageSize}`}
               priority={imagePriority}
             />
           ) : null}
@@ -305,7 +320,7 @@ function SlideVisual({
             <FigureImage
               src={image}
               alt={visualLabel ?? title}
-              className="systems-image systems-image-faint"
+              className={`systems-image systems-image-faint image-size-${imageSize}`}
               priority={imagePriority}
             />
           ) : null}
@@ -320,7 +335,12 @@ function SlideVisual({
       <>
         <div className="case-board">
           {image ? (
-            <FigureImage src={image} alt={visualLabel ?? title} className="case-image" priority={imagePriority} />
+            <FigureImage
+              src={image}
+              alt={visualLabel ?? title}
+              className={`case-image image-size-${imageSize}`}
+              priority={imagePriority}
+            />
           ) : null}
         </div>
         <VisualCaption label={visualLabel} />
@@ -332,7 +352,7 @@ function SlideVisual({
     <>
       {image ? (
         <>
-          <div className="visual-figure">
+          <div className={`visual-figure image-size-${imageSize}`}>
             <Image
               src={image}
               alt={visualLabel ?? title}
