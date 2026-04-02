@@ -11,5 +11,5 @@ export default createSceneSlide({
     "Bản vá sau bắt đầu bẻ cong ý đồ của bản vá trước",
     "Chi phí điều hướng AI có lúc lớn hơn tự triển khai",
   ],
-  proof: ["Ngữ cảnh bị trôi", "Bản vá tích lũy", "Thiếu artifact bền vững"],
+  proof: ["Ngữ cảnh bị trôi", "Bản vá tích lũy", "Thiếu file và tài liệu bền vững"],
 });

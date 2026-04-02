@@ -22,7 +22,7 @@
 
 - BMAD should be presented as a **structured development method**, not as a bundle of prompts.
 - The core contrast is **vibe coding vs context engineering**.
-- The strongest BMAD themes are: specialized agents, artifact-driven workflow, context engineering, quality gates, and traceability.
+- The strongest BMAD themes are: specialized agents, workflow dựa trên artifact, context engineering, quality gates, and traceability.
 - The role of the human should stay explicit throughout: humans set direction, approve tradeoffs, define guardrails, and verify outputs.
 - Large productivity claims must be anchored to named case studies, not stated as universal guarantees.
 - AI-generated images should be used sparingly. Only hero or concept-heavy slides should get bespoke visuals; most slides should rely on typography, diagrams, screenshots, or real artifacts.
@@ -126,7 +126,7 @@
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
 | 4 | **Vibe Coding Là Gì** | Define vibe coding neutrally as rapid AI-assisted coding driven by continuous conversation and low upfront structure. | 2.5 min |
-| 5 | **Context Engineering Là Gì** | Define context engineering as organizing the right context, at the right time, for the right scope through artifacts, roles, and controlled steps. | 2.5 min |
+| 5 | **Context Engineering Là Gì** | Define context engineering as organizing the right context, at the right time, for the right scope through artifact, roles, and controlled steps. | 2.5 min |
 | 6 | **So Sánh Tổng Quan** | Compare the two models across source of context, decision memory, task boundaries, review style, and repeatability. | 2.5 min |
 | 7 | **Khi Nào Mỗi Cách Phù Hợp** | Show that vibe coding is useful for quick exploration, while context engineering is stronger when work needs stability, coordination, and reviewability. | 2.5 min |
 
@@ -139,19 +139,19 @@
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
 | 8 | **Tổng Quan Về BMAD** | Define BMAD as a structured method built on roles, documents, context discipline, and traceability. | 3 min |
-| 9 | **Năm Trụ Cột** | Present the five pillars as specialized agents, lifecycle discipline, artifact contracts, context engineering, and reflection plus governance. | 2.5 min |
+| 9 | **Năm Trụ Cột** | Present the five pillars as specialized agents, lifecycle discipline, clear artifacts for each step, context engineering, and reflection plus governance. | 2.5 min |
 | 10 | **Nhìn Gần Hơn** | Set up the rest of the talk around team structure, workflow, control points, and practical proof. | 2.5 min |
 
 ---
 
 ## ACT 4: THE WHO — Agent Team (~8 min, 3 core slides)
 
-**Theme:** *Meet the AI workforce and the artifact handoff chain*
+**Theme:** *Meet the AI workforce and the handoff chain through artifacts*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
 | 11 | **Đội Hình Cốt Lõi** | Present the delivery chain accurately: Mary (Analyst), John (PM), Winston (Architect), Sarah/PO, Bob (Scrum Master), Amelia (Developer), Quinn (QA). | 2.5 min |
-| 12 | **Từ Lập Kế Hoạch Đến Thực Thi** | Show the artifact handoff: Brief -> PRD -> Architecture -> Story -> Code -> QA evidence. | 3 min |
+| 12 | **Từ Lập Kế Hoạch Đến Thực Thi** | Show the handoff through artifacts: Brief -> PRD -> Architecture -> Story -> Code -> QA evidence. | 3 min |
 | 13 | **Vì Sao Chuyên Biệt Hóa Hiệu Quả** | Make the logic explicit: smaller scope per role means tighter context, clearer responsibility, and more reviewable output. | 2.5 min |
 
 ---

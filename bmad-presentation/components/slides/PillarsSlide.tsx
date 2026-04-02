@@ -5,11 +5,11 @@ export default createSceneSlide({
   kicker: "Phần 3",
   title: "Năm Trụ Cột",
   headline: "BMAD gồm năm phần bổ trợ lẫn nhau.",
-  summary: "Agent chuyên biệt, kỷ luật vòng đời, hợp đồng tài liệu, kỹ thuật tổ chức ngữ cảnh, và phản biện có kiểm soát.",
+  summary: "Agent chuyên biệt, kỷ luật vòng đời, artifact rõ ràng cho từng bước, kỹ thuật tổ chức ngữ cảnh, và phản biện có kiểm soát.",
   bullets: [
     "Agent chuyên biệt",
     "Vòng đời bốn giai đoạn",
-    "Hợp đồng tài liệu",
+    "Artifact rõ ràng cho từng bước",
     "Kỹ thuật tổ chức ngữ cảnh",
     "Phản biện và kiểm soát",
   ],
