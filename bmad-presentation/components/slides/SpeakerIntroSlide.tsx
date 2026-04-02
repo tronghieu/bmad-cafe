@@ -1,13 +1,32 @@
 import Image from "next/image";
 import { Icon } from "@/components/presentation-icons";
+import { SpeakerHighlightsBoard, type BoardItem } from "@/components/slide-boards";
 
-const experiences = [
-  "CIO @ Vtech",
-  "Ex-CPO Sabomall",
-  "Ex-CTO Agilead Global & CEO Agilearn",
-  "Ex-CPO Velacorp",
-  "Ex-CTO Alitech",
-  "PM VCCorp",
+const highlights: BoardItem[] = [
+  {
+    title: "Leadership",
+    description: "CIO tại Vtech, dẫn dắt sản phẩm và công nghệ ở môi trường vận hành thực tế.",
+    icon: "team" as const,
+    tone: "ember" as const,
+  },
+  {
+    title: "Product",
+    description: "Từng giữ vai trò CPO tại Sabomall và Velacorp, bám bài toán từ giá trị đến delivery.",
+    icon: "target" as const,
+    tone: "sky" as const,
+  },
+  {
+    title: "Technology",
+    description: "Ex-CTO tại Agilead Global và Alitech, quan tâm đến kiến trúc, team, và chất lượng thực thi.",
+    icon: "code" as const,
+    tone: "gold" as const,
+  },
+  {
+    title: "Transformation",
+    description: "Theo đuổi cách AI đi vào quy trình làm việc có cấu trúc thay vì chỉ tạo hiệu ứng demo.",
+    icon: "workflow" as const,
+    tone: "plum" as const,
+  },
 ];
 
 export default function SpeakerIntroSlide() {
@@ -46,7 +65,7 @@ export default function SpeakerIntroSlide() {
 
         <h2 className="slide-headline animate-in">Lưu Trọng Hiếu</h2>
         <p className="slide-summary animate-in speaker-role">
-          Người làm sản phẩm và công nghệ, quan tâm đến cách AI có thể đi vào quy trình làm việc thực tế.
+          Người làm sản phẩm và công nghệ, tập trung vào cách AI đi vào quy trình làm việc thực tế thay vì dừng ở mức demo.
         </p>
 
         <div className="proof-cluster speaker-chip-row">
@@ -54,24 +73,13 @@ export default function SpeakerIntroSlide() {
             <Icon name="proof" className="chip-icon" />
             <span>CIO @ Vtech</span>
           </div>
+          <div className="proof-chip animate-in">
+            <Icon name="target" className="chip-icon" />
+            <span>Product + Technology</span>
+          </div>
         </div>
 
-        <ul className="slide-bullets speaker-experience-list">
-          {experiences.map((item, index) => (
-            <li
-              key={item}
-              className="animate-in"
-              style={{ animationDelay: `${140 + index * 55}ms` }}
-            >
-              <Icon name="bullet" className="list-icon" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-
-        <p className="speaker-quote animate-in">
-          "Chỉ là một người làm sản phẩm công nghệ."
-        </p>
+        <SpeakerHighlightsBoard items={highlights} />
       </div>
     </article>
   );

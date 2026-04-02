@@ -27,6 +27,7 @@ export type SlideSceneProps = {
   kicker: string;
   title: string;
   headline: string;
+  headlineWidth?: "base" | "wide" | "full";
   summary: string;
   bullets?: string[];
   proof?: string[];
@@ -36,7 +37,7 @@ export type SlideSceneProps = {
   visualLabel?: string;
   hideVisual?: boolean;
   visualVariant?: SlideVisualVariant;
-  children?: ReactNode;
+  visualContent?: ReactNode;
 };
 
 export function SlideScene({
@@ -44,6 +45,7 @@ export function SlideScene({
   kicker,
   title,
   headline,
+  headlineWidth = "base",
   summary,
   bullets,
   proof,
@@ -53,12 +55,13 @@ export function SlideScene({
   visualLabel,
   hideVisual,
   visualVariant = "default",
+  visualContent,
 }: SlideSceneProps) {
   const hasVisual =
     !hideVisual &&
     kind !== "section" &&
     kind !== "closing" &&
-    (Boolean(image) || visualVariant !== "default");
+    (Boolean(image) || visualVariant !== "default" || Boolean(visualContent));
 
   return (
     <article className={`slide-sheet kind-${kind} ${hasVisual ? "" : "is-visual-hidden"}`}>
@@ -74,7 +77,7 @@ export function SlideScene({
           </p>
         </div>
 
-        <h2 className="slide-headline animate-in">{headline}</h2>
+        <h2 className={`slide-headline headline-width-${headlineWidth} animate-in`}>{headline}</h2>
         <p className="slide-summary animate-in">{summary}</p>
 
         {bullets?.length ? (
@@ -110,15 +113,17 @@ export function SlideScene({
 
       {hasVisual ? (
         <div className="slide-column slide-column-visual animate-visual">
-          <SlideVisual
-            image={image}
-            title={title}
-            kind={kind}
-            imageSize={imageSize}
-            visualLabel={visualLabel}
-            visualVariant={visualVariant}
-            imagePriority={imagePriority}
-          />
+          {visualContent ?? (
+            <SlideVisual
+              image={image}
+              title={title}
+              kind={kind}
+              imageSize={imageSize}
+              visualLabel={visualLabel}
+              visualVariant={visualVariant}
+              imagePriority={imagePriority}
+            />
+          )}
         </div>
       ) : null}
     </article>
@@ -195,18 +200,25 @@ function SlideVisual({
     return (
       <>
         <div className="systems-board systems-phases">
-          {["Phân tích", "Lập kế hoạch", "Thiết kế giải pháp", "Triển khai"].map((phase, index) => (
+          {[
+            { phase: "Phân tích", icon: "search" as const },
+            { phase: "Lập kế hoạch", icon: "plan" as const },
+            { phase: "Thiết kế giải pháp", icon: "layers" as const },
+            { phase: "Triển khai", icon: "code" as const },
+          ].map((item, index) => (
             <div
-              key={phase}
+              key={item.phase}
               className="phase-card animate-visual"
               style={{ animationDelay: `${index * 90}ms` }}
             >
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{phase}</strong>
+              <div className="phase-card-meta">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Icon name={item.icon} className="board-icon" />
+              </div>
+              <strong>{item.phase}</strong>
             </div>
           ))}
         </div>
-        <VisualCaption label={visualLabel ?? "Sơ đồ vòng đời bốn giai đoạn"} />
       </>
     );
   }
@@ -234,7 +246,6 @@ function SlideVisual({
             />
           ) : null}
         </div>
-        <VisualCaption label={visualLabel} />
       </>
     );
   }
@@ -243,19 +254,29 @@ function SlideVisual({
     return (
       <>
         <div className="systems-board context-board">
-          <div className="context-column animate-visual">
-            <span>Ngữ cảnh đầu vào quá lớn</span>
-            <p>Tài liệu nguyên khối làm mô hình quá tải và dễ trôi khỏi ràng buộc ban đầu.</p>
+          <div className="context-column animate-visual is-source">
+            <div className="context-column-icon">
+              <Icon name="layers" className="board-icon" />
+            </div>
+            <div>
+              <span>Ngữ cảnh đầu vào quá lớn</span>
+              <p>Tài liệu nguyên khối làm mô hình quá tải và dễ trôi khỏi ràng buộc ban đầu.</p>
+            </div>
           </div>
           <div className="context-arrow animate-visual" />
           <div className="context-shards">
-            {["Tệp từng bước", "Mảnh đầu việc", "Mảnh ràng buộc"].map((item, index) => (
+            {[
+              { label: "Tệp từng bước", icon: "workflow" as const },
+              { label: "Mảnh đầu việc", icon: "scope" as const },
+              { label: "Mảnh ràng buộc", icon: "shield" as const },
+            ].map((item, index) => (
               <div
-                key={item}
+                key={item.label}
                 className="context-shard animate-visual"
                 style={{ animationDelay: `${90 + index * 80}ms` }}
               >
-                {item}
+                <Icon name={item.icon} className="board-icon" />
+                <span>{item.label}</span>
               </div>
             ))}
           </div>
@@ -268,7 +289,6 @@ function SlideVisual({
             />
           ) : null}
         </div>
-        <VisualCaption label={visualLabel} />
       </>
     );
   }
@@ -277,13 +297,18 @@ function SlideVisual({
     return (
       <>
         <div className="systems-board core-board">
-          {["Đề xuất", "Phản biện", "Tinh chỉnh"].map((item, index) => (
+          {[
+            { label: "Đề xuất", icon: "lightbulb" as const },
+            { label: "Phản biện", icon: "review" as const },
+            { label: "Tinh chỉnh", icon: "wrench" as const },
+          ].map((item, index) => (
             <div
-              key={item}
+              key={item.label}
               className="core-orbit animate-visual"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {item}
+              <Icon name={item.icon} className="board-icon" />
+              <span>{item.label}</span>
             </div>
           ))}
           <div className="core-center animate-visual">C.O.R.E.</div>
@@ -296,7 +321,6 @@ function SlideVisual({
             />
           ) : null}
         </div>
-        <VisualCaption label={visualLabel} />
       </>
     );
   }
@@ -305,14 +329,19 @@ function SlideVisual({
     return (
       <>
         <div className="systems-board layers-board">
-          {["Cổng sẵn sàng", "Rà soát phản biện", "TDD + kiểm chứng", "Khả năng truy vết"].map(
-            (item, index) => (
+          {[
+            { label: "Implementation Readiness", icon: "shield" as const },
+            { label: "Adversarial Review", icon: "review" as const },
+            { label: "TDD + Verification", icon: "checklist" as const },
+            { label: "Traceability Pack", icon: "trace" as const },
+          ].map((item, index) => (
               <div
-                key={item}
+                key={item.label}
                 className="layer-band animate-visual"
                 style={{ animationDelay: `${index * 90}ms` }}
               >
-                <span>{item}</span>
+                <Icon name={item.icon} className="board-icon" />
+                <span>{item.label}</span>
               </div>
             ),
           )}
@@ -325,7 +354,6 @@ function SlideVisual({
             />
           ) : null}
         </div>
-        <VisualCaption label={visualLabel} />
       </>
     );
   }
@@ -343,7 +371,6 @@ function SlideVisual({
             />
           ) : null}
         </div>
-        <VisualCaption label={visualLabel} />
       </>
     );
   }
@@ -362,7 +389,6 @@ function SlideVisual({
               className="visual-image"
             />
           </div>
-          <VisualCaption label={visualLabel} />
         </>
       ) : null}
     </>
@@ -395,15 +421,6 @@ function FigureImage({
 }
 
 function VisualCaption({ label }: { label?: string }) {
-  return (
-    <div className="visual-caption">
-      <span>
-        <Icon name="visual" className="label-icon" />
-        <span>Vai trò hình ảnh</span>
-      </span>
-      <p>
-        {label ?? "Chỉ dùng hình để hỗ trợ. Thông điệp chính vẫn phải nằm trong nội dung slide."}
-      </p>
-    </div>
-  );
+  void label;
+  return null;
 }

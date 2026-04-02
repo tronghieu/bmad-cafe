@@ -160,9 +160,9 @@ select {
 .slide-sheet {
   height: 100vh;
   display: grid;
-  grid-template-columns: minmax(0, 0.96fr) minmax(24rem, 1.04fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(24rem, 0.88fr);
   gap: 2.5rem;
-  padding: 2.35rem 3rem 6.35rem;
+  padding: 2.35rem 3rem 7.8rem;
   overflow: hidden;
 }
 
@@ -174,12 +174,14 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 0.5rem;
 }
 
 .slide-column-visual {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .speaker-slide {
@@ -302,7 +304,7 @@ select {
 }
 
 .kind-section .slide-headline {
-  max-width: 15ch;
+  max-width: 18ch;
   font-size: clamp(2.5rem, 4.4vw, 4.8rem);
   line-height: 0.92;
 }
@@ -320,15 +322,24 @@ select {
 .slide-headline {
   margin: 0.95rem 0 0;
   font-family: var(--font-display), serif;
-  font-size: clamp(1.8rem, 3.1vw, 3.35rem);
-  line-height: 1;
+  font-size: clamp(1.95rem, 3.2vw, 3.5rem);
+  line-height: 0.96;
   letter-spacing: -0.04em;
-  max-width: 13ch;
+  max-width: 18.5ch;
+  text-wrap: balance;
+}
+
+.headline-width-wide {
+  max-width: 21.5ch;
+}
+
+.headline-width-full {
+  max-width: 25ch;
 }
 
 .slide-summary {
   margin-top: 1.3rem;
-  max-width: 44rem;
+  max-width: 48rem;
   font-size: 1.06rem;
 }
 
@@ -338,7 +349,7 @@ select {
   margin: 1.65rem 0 0;
   display: grid;
   gap: 0.85rem;
-  max-width: 42rem;
+  max-width: 44rem;
 }
 
 .slide-bullets li {
@@ -416,6 +427,7 @@ select {
 .contrast-board,
 .systems-board,
 .case-board,
+.custom-board,
 .visual-caption {
   width: min(100%, 46rem);
 }
@@ -496,6 +508,12 @@ select {
   border: 1px solid rgba(24, 21, 18, 0.08);
 }
 
+.phase-card-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
 .phase-card span,
 .flow-node,
 .context-shard,
@@ -540,10 +558,23 @@ select {
 }
 
 .context-column {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
   border-radius: 1.4rem;
   padding: 1rem 1.1rem;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(24, 21, 18, 0.08);
+}
+
+.context-column-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.95rem;
+  display: grid;
+  place-items: center;
+  background: rgba(200, 97, 65, 0.08);
+  color: var(--ember-600);
 }
 
 .context-column span {
@@ -564,6 +595,9 @@ select {
 }
 
 .context-shard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   border-radius: 999px;
   padding: 0.72rem 0.95rem;
   background: rgba(255, 255, 255, 0.85);
@@ -592,6 +626,9 @@ select {
 }
 
 .core-orbit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   padding: 0.85rem 1rem;
 }
 
@@ -653,6 +690,9 @@ select {
 }
 
 .layer-band {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   border-radius: 999px;
   padding: 0.92rem 1rem;
   background: rgba(255, 255, 255, 0.72);
@@ -812,7 +852,351 @@ select {
 
 .kind-hero,
 .kind-closing {
-  grid-template-columns: minmax(0, 0.94fr) minmax(24rem, 1.06fr);
+  grid-template-columns: minmax(0, 1.16fr) minmax(24rem, 0.84fr);
+}
+
+.custom-board {
+  display: grid;
+  gap: 1rem;
+}
+
+.board-card,
+.workflow-step,
+.speaker-highlight,
+.agent-role-card,
+.kpi-card,
+.party-role,
+.pros-cons-card,
+.scale-level {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  border-radius: 1.45rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(247, 242, 235, 0.92));
+  box-shadow: 0 14px 30px rgba(74, 55, 42, 0.06);
+}
+
+.board-card::before,
+.workflow-step::before,
+.speaker-highlight::before,
+.agent-role-card::before,
+.kpi-card::before,
+.party-role::before,
+.pros-cons-card::before,
+.scale-level::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: var(--tone);
+  opacity: 0.9;
+}
+
+.tone-ember {
+  --tone: #c86141;
+  --tone-soft: rgba(200, 97, 65, 0.11);
+}
+
+.tone-sage {
+  --tone: #4f8a76;
+  --tone-soft: rgba(79, 138, 118, 0.12);
+}
+
+.tone-sky {
+  --tone: #4683b8;
+  --tone-soft: rgba(70, 131, 184, 0.12);
+}
+
+.tone-gold {
+  --tone: #b68b2f;
+  --tone-soft: rgba(182, 139, 47, 0.12);
+}
+
+.tone-plum {
+  --tone: #8d5ca6;
+  --tone-soft: rgba(141, 92, 166, 0.12);
+}
+
+.feature-grid-board,
+.speaker-highlights-board,
+.agent-team-board,
+.kpi-grid-board,
+.scale-addon-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.board-card,
+.speaker-highlight,
+.agent-role-card,
+.kpi-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+  padding: 1.05rem 1.05rem 1rem;
+}
+
+.board-card-icon {
+  width: 2.85rem;
+  height: 2.85rem;
+  flex: none;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: var(--tone-soft);
+  color: var(--tone);
+}
+
+.board-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.board-card-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.board-card-copy h3,
+.workflow-step-copy h3,
+.comparison-cell strong,
+.pros-cons-column h3,
+.scale-level h3,
+.party-role strong {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.board-card-copy p,
+.workflow-step-copy p,
+.comparison-cell p,
+.pros-cons-card p,
+.scale-level p,
+.party-role p,
+.party-note li {
+  margin: 0;
+  color: var(--ink-700);
+  line-height: 1.45;
+}
+
+.board-card-kicker,
+.pros-cons-column p,
+.scale-addons p,
+.comparison-label,
+.party-note p {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ember-600);
+}
+
+.workflow-board {
+  position: relative;
+  gap: 0.85rem;
+}
+
+.workflow-board::before {
+  content: "";
+  position: absolute;
+  left: 1.7rem;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(200, 97, 65, 0.16), rgba(179, 76, 46, 0.48), rgba(200, 97, 65, 0.16));
+}
+
+.workflow-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1.05rem 1.1rem;
+}
+
+.workflow-step-meta {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.45rem;
+  justify-items: center;
+}
+
+.workflow-step-meta span {
+  font-family: var(--font-mono), monospace;
+  color: var(--tone);
+}
+
+.workflow-step-meta .board-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--tone);
+}
+
+.comparison-matrix-board {
+  gap: 0.85rem;
+}
+
+.comparison-header,
+.comparison-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 0.9rem;
+}
+
+.comparison-side,
+.comparison-row {
+  border-radius: 1.55rem;
+}
+
+.comparison-side {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(74, 55, 42, 0.05);
+}
+
+.comparison-side span {
+  font-family: var(--font-display), serif;
+  font-size: 1.28rem;
+  line-height: 1.1;
+}
+
+.comparison-spacer,
+.comparison-divider {
+  width: 1px;
+  background: linear-gradient(180deg, rgba(200, 97, 65, 0.12), rgba(179, 76, 46, 0.45), rgba(200, 97, 65, 0.12));
+}
+
+.comparison-row {
+  align-items: stretch;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(247, 242, 235, 0.92));
+  box-shadow: 0 12px 26px rgba(74, 55, 42, 0.05);
+}
+
+.comparison-cell {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.comparison-cell.is-right {
+  text-align: left;
+}
+
+.agent-team-board {
+  align-items: stretch;
+}
+
+.party-mode-board {
+  gap: 1rem;
+}
+
+.party-hub {
+  display: grid;
+  place-items: center;
+  min-height: 6rem;
+  border-radius: 1.8rem;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(247, 242, 235, 0.92));
+  box-shadow: 0 16px 34px rgba(74, 55, 42, 0.06);
+}
+
+.party-hub span {
+  font-family: var(--font-display), serif;
+  font-size: 1.5rem;
+  line-height: 1.05;
+}
+
+.party-role-grid,
+.party-notes,
+.pros-cons-board {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.party-role {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.party-role .board-icon {
+  color: var(--tone);
+  margin-top: 0.1rem;
+}
+
+.party-note,
+.pros-cons-column,
+.scale-track,
+.scale-addons {
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(247, 242, 235, 0.92));
+  box-shadow: 0 14px 28px rgba(74, 55, 42, 0.05);
+}
+
+.party-note,
+.pros-cons-column,
+.scale-addons {
+  padding: 1rem 1.05rem;
+}
+
+.party-note ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pros-cons-column {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.pros-cons-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pros-cons-card {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.95rem 1rem;
+}
+
+.pros-cons-card .board-icon {
+  color: var(--tone);
+  margin-top: 0.1rem;
+}
+
+.scale-ladder-board {
+  gap: 1rem;
+}
+
+.scale-track {
+  padding: 1rem 1.05rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.scale-level {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 0.95rem 1rem;
+}
+
+.scale-level > span {
+  font-family: var(--font-mono), monospace;
+  color: var(--tone);
+}
+
+.scale-addons {
+  display: grid;
+  gap: 0.95rem;
 }
 
 @keyframes riseIn {
@@ -875,6 +1259,7 @@ select {
 
   .slide-column-visual {
     order: -1;
+    align-items: stretch;
   }
 
   .speaker-visual-col {
@@ -933,7 +1318,12 @@ select {
 
   .slide-headline {
     font-size: clamp(1.65rem, 7.6vw, 2.7rem);
-    max-width: 13ch;
+    max-width: 18ch;
+  }
+
+  .headline-width-wide,
+  .headline-width-full {
+    max-width: none;
   }
 
   .speaker-portrait-wrap {
@@ -950,6 +1340,7 @@ select {
   .contrast-board,
   .systems-board,
   .case-board,
+  .custom-board,
   .visual-caption {
     width: 100%;
   }
@@ -993,5 +1384,23 @@ select {
 
   .nav-button:last-of-type {
     justify-self: end;
+  }
+
+  .feature-grid-board,
+  .speaker-highlights-board,
+  .agent-team-board,
+  .kpi-grid-board,
+  .scale-addon-grid,
+  .party-role-grid,
+  .party-notes,
+  .pros-cons-board,
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-spacer,
+  .comparison-divider {
+    display: none;
   }
 }
