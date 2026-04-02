@@ -4,7 +4,7 @@ export default createSceneSlide({
   kind: "hero",
   kicker: "Phần 1",
   title: "Cú Mở Đầu",
-  headline: "Mã do AI tạo ra không phải vấn đề. Vấn đề là mã do AI tạo ra nhưng không có cấu trúc.",
+  headline: "Vấn đề không phải AI viết code. Vấn đề là code không có cấu trúc.",
   summary: "Một nền mã nguồn rối, khó tin, khó bảo trì. Vấn đề không nằm ở AI, mà nằm ở việc thiếu phương pháp.",
   proof: ["Logic rối", "Hành vi trùng lặp", "Không có cấu trúc đáng tin"],
   visualLabel: "Hỗn loạn trong mã nguồn như một tín hiệu cảnh báo",

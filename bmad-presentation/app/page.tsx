@@ -3,6 +3,7 @@ import {
   ActionSectionSlide,
   AdvancedToolkitSlide,
   ArtifactFlowSlide,
+  BmadTradeoffsSlide,
   BmadOverviewSlide,
   ClosingSlide,
   ColdOpenSlide,
@@ -78,6 +79,7 @@ export default function HomePage() {
       <RoiPatternSlide />
       <PartyModeSlide />
       <ActionSectionSlide />
+      <BmadTradeoffsSlide />
       <ScaleEcosystemSlide />
       <GetStartedSlide />
       <ClosingSlide />

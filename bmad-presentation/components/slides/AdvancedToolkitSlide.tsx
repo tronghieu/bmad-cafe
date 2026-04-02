@@ -3,10 +3,10 @@ import { createSceneSlide } from "@/components/slides/create-scene-slide";
 export default createSceneSlide({
   kind: "contrast",
   kicker: "Phần 5",
-  title: "Bộ Công Cụ Mở Rộng",
-  headline: "Sau khi nắm được quy trình cốt lõi, BMAD còn có thêm các lớp mở rộng để tăng chiều sâu và khả năng tùy biến.",
+  title: "Mở Rộng",
+  headline: "BMAD còn có các lớp mở rộng sau phần cốt lõi.",
   summary:
-    "Slide này không nói về luồng chính. Nó chỉ giới thiệu các extension giúp đào sâu tư duy, mở rộng theo domain, hoặc dựng thêm agent riêng.",
+    "Slide này không nói về luồng chính. Nó giới thiệu các extension dùng sau khi đã nắm phần cốt lõi, để đào sâu tư duy, mở rộng theo domain, hoặc dựng thêm agent riêng.",
   bullets: [
     "Advanced Elicitation: đào sâu chất lượng suy nghĩ và phản biện",
     "Expansion Packs: thêm đội ngũ chuyên biệt theo domain",

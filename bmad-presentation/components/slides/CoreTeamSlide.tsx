@@ -4,7 +4,7 @@ export default createSceneSlide({
   kind: "hero",
   kicker: "Phần 4",
   title: "Đội Hình Cốt Lõi",
-  headline: "BMAD dùng nhiều vai trò chuyên biệt thay vì dồn mọi việc vào một agent chung.",
+  headline: "BMAD dùng vai trò chuyên biệt thay vì một agent chung.",
   summary: "Mỗi vai trò nhận phạm vi nhỏ hơn, tài liệu rõ hơn, và tạo ra đầu ra dễ rà soát hơn.",
   bullets: [
     "Mary -> Brief",

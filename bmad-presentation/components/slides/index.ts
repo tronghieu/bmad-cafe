@@ -32,6 +32,7 @@ export { default as SoftwareArchaeologySlide } from "./SoftwareArchaeologySlide"
 export { default as RoiPatternSlide } from "./RoiPatternSlide";
 export { default as PartyModeSlide } from "./PartyModeSlide";
 export { default as ActionSectionSlide } from "./ActionSectionSlide";
+export { default as BmadTradeoffsSlide } from "./BmadTradeoffsSlide";
 export { default as ScaleEcosystemSlide } from "./ScaleEcosystemSlide";
 export { default as GetStartedSlide } from "./GetStartedSlide";
 export { default as ClosingSlide } from "./ClosingSlide";

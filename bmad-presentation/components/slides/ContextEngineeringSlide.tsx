@@ -4,7 +4,7 @@ export default createSceneSlide({
   kind: "systems",
   kicker: "Phần 5",
   title: "Kỹ Thuật Tổ Chức Ngữ Cảnh",
-  headline: "BMAD quản lý ngữ cảnh có chủ đích thay vì hy vọng mô hình nhớ đủ lâu.",
+  headline: "BMAD quản lý ngữ cảnh có chủ đích.",
   summary: "Kiến trúc theo từng bước, nạp đúng ngữ cảnh cần dùng, và chia tài liệu khi cần giúp ngữ cảnh nhỏ hơn, sạch hơn, và an toàn hơn.",
   bullets: [
     "Nạp ngữ cảnh đúng lúc",

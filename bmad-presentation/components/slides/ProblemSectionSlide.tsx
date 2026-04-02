@@ -4,7 +4,7 @@ export default createSceneSlide({
   kind: "section",
   kicker: "Chương 02",
   title: "So Sánh",
-  headline: "Vibe coding và context engineering khác nhau ở cách tổ chức ngữ cảnh, không chỉ ở model.",
+  headline: "Khác nhau ở cách tổ chức ngữ cảnh.",
   summary: "",
   hideVisual: true,
 });

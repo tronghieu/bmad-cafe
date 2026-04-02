@@ -3,9 +3,10 @@ import { createSceneSlide } from "@/components/slides/create-scene-slide";
 export default createSceneSlide({
   kind: "contrast",
   kicker: "Phần 2",
-  title: "So Sánh Tổng Quan",
-  headline: "Khác biệt lớn nhất không nằm ở model mạnh hay yếu, mà nằm ở cách ngữ cảnh được tổ chức và giữ lại.",
-  summary: "Một bên ưu tiên tốc độ tương tác trong session hiện tại. Bên kia ưu tiên ngữ cảnh bền vững, task boundary rõ ràng, và khả năng review xuyên suốt.",
+  title: "Khác Biệt Cốt Lõi",
+  headline: "Khác biệt nằm ở cách tổ chức và giữ ngữ cảnh.",
+  summary:
+    "Khác biệt không nằm ở model mạnh hay yếu. Một bên ưu tiên tốc độ tương tác trong session hiện tại; bên kia ưu tiên ngữ cảnh bền vững, task boundary rõ ràng, và khả năng review xuyên suốt.",
   bullets: [
     "Nguồn sự thật: chat history vs artifact/file đầu ra",
     "Cách giữ quyết định: conversation vs tài liệu đầu ra có thể rà soát",
