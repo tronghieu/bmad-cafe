@@ -3,9 +3,9 @@ import { createSceneSlide } from "@/components/slides/create-scene-slide";
 export default createSceneSlide({
   kind: "contrast",
   kicker: "Phần 2",
-  title: "Cái Giá Thật Với Outsourcing",
-  headline: "Vấn đề không chỉ là mã xấu. Vấn đề là biên lợi nhuận, niềm tin, và bàn giao.",
-  summary: "Hỗn loạn kỹ thuật nhanh chóng biến thành làm lại, tăng ca, vào việc chậm, và khách hàng bất an.",
+  title: "Tác Động Trong Outsourcing",
+  headline: "Khi quy trình thiếu cấu trúc, tác động không chỉ nằm ở mã nguồn mà còn ở chi phí vận hành.",
+  summary: "Làm lại, tăng ca, vào việc chậm, và bàn giao kém chất lượng đều ảnh hưởng trực tiếp đến biên lợi nhuận và niềm tin.",
   bullets: [
     "Làm lại khiến estimate mất giá trị",
     "Bàn giao đầy lỗi khiến đội vận hành khổ sở",

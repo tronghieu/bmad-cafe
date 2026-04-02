@@ -4,8 +4,8 @@ export default createSceneSlide({
   kind: "closing",
   kicker: "Phần 7",
   title: "Kết Lại",
-  headline: "Tương lai không phải dev versus AI. Tương lai là con người có kỷ luật điều phối AI có cấu trúc.",
-  summary: "Kỷ luật, cấu trúc, và phán đoán của con người sẽ quyết định chất lượng của các đội phần mềm dùng AI.",
+  headline: "AI hữu ích hơn khi được đặt trong một quy trình có cấu trúc và có người chịu trách nhiệm.",
+  summary: "Kỷ luật, cấu trúc, và phán đoán của con người vẫn quyết định chất lượng đầu ra.",
   proof: ["Kỷ luật", "Cấu trúc", "Phán đoán của con người"],
   hideVisual: true,
 });

@@ -4,8 +4,8 @@ export default createSceneSlide({
   kind: "hero",
   kicker: "Phần 4",
   title: "Đội Hình Cốt Lõi",
-  headline: "BMAD không giả làm một siêu AI. Nó dùng một đội ngũ có vai trò rõ ràng.",
-  summary: "Một chuỗi bàn giao nơi mỗi agent nhận ngữ cảnh nhỏ hơn và tạo ra đầu ra rõ hơn.",
+  headline: "BMAD dùng nhiều vai trò chuyên biệt thay vì dồn mọi việc vào một agent chung.",
+  summary: "Mỗi vai trò nhận phạm vi nhỏ hơn, tài liệu rõ hơn, và tạo ra đầu ra dễ rà soát hơn.",
   bullets: [
     "Mary -> Brief",
     "John -> PRD",
@@ -16,5 +16,5 @@ export default createSceneSlide({
     "Quinn -> QA",
   ],
   visualLabel: "Ảnh nhóm với nhãn vai trò đặt chồng lên",
-  image: "/assets/slide-11.png",
+  image: "/assets/core-agent-team.png",
 });

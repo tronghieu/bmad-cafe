@@ -6,6 +6,6 @@ export default createSceneSlide({
   title: "BMAD Method",
   headline: "BMAD Method",
   summary:
-    "Một phương pháp làm phần mềm với AI bằng vai trò rõ ràng, tài liệu rõ ràng, và bàn giao rõ ràng.",
+    "Một phương pháp làm phần mềm với AI dựa trên vai trò rõ ràng, tài liệu rõ ràng, và bàn giao có thể kiểm tra.",
   hideVisual: true,
 });

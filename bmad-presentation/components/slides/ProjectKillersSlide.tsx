@@ -4,8 +4,8 @@ export default createSceneSlide({
   kind: "contrast",
   kicker: "Phần 2",
   title: "Ba Kẻ Giết Dự Án",
-  headline: "Ba failure mode này không ngẫu nhiên. Chúng là hệ quả cấu trúc.",
-  summary: "BMAD không bắt đầu bằng giải pháp. Nó bắt đầu bằng việc gọi tên đúng bệnh.",
+  headline: "Ba lỗi này thường xuất hiện cùng nhau khi quy trình không kiểm soát được ngữ cảnh và quyết định kỹ thuật.",
+  summary: "Chúng không phải lỗi riêng lẻ, mà là hệ quả của cùng một cách làm việc thiếu cấu trúc.",
   bullets: [
     "Lệch ngữ cảnh: AI quên các ràng buộc trước đó",
     "Nợ ảo giác: giả định sai tích lũy thành nợ kỹ thuật",

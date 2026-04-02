@@ -115,7 +115,6 @@ export function Presentation({ children }: { children: ReactNode }) {
               disabled={activeIndex === 0 || isPending}
             >
               <Icon name="prev" className="nav-icon" />
-              <span>Trước</span>
             </button>
 
             <div
@@ -149,7 +148,6 @@ export function Presentation({ children }: { children: ReactNode }) {
               onClick={() => goToSlide(Math.min(slides.length - 1, activeIndex + 1))}
               disabled={activeIndex === slides.length - 1 || isPending}
             >
-              <span>Tiếp</span>
               <Icon name="next" className="nav-icon" />
             </button>
           </div>

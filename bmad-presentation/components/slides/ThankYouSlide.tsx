@@ -5,6 +5,6 @@ export default createSceneSlide({
   kicker: "Kết",
   title: "Cảm ơn",
   headline: "Cảm ơn.",
-  summary: "Một cách làm phần mềm có cấu trúc, có trách nhiệm, và đáng tin hơn.",
+  summary: "",
   hideVisual: true,
 });

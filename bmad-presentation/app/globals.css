@@ -91,12 +91,12 @@ select {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  padding: 0.95rem 1.15rem;
-  border: 1px solid rgba(24, 21, 18, 0.08);
-  border-radius: 1.5rem;
-  background: rgba(255, 252, 246, 0.7);
-  box-shadow: 0 14px 34px rgba(74, 55, 42, 0.06);
-  backdrop-filter: blur(8px);
+  padding: 0.72rem 0.95rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .hud-eyebrow,
@@ -160,9 +160,9 @@ select {
 .slide-sheet {
   height: 100vh;
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(21rem, 0.88fr);
-  gap: 2rem;
-  padding: 2.5rem 3rem 8rem;
+  grid-template-columns: minmax(0, 0.96fr) minmax(24rem, 1.04fr);
+  gap: 2.5rem;
+  padding: 2.35rem 3rem 6.35rem;
   overflow: hidden;
 }
 
@@ -233,10 +233,10 @@ select {
 .slide-headline {
   margin: 0.95rem 0 0;
   font-family: var(--font-display), serif;
-  font-size: clamp(2.15rem, 4vw, 4.5rem);
-  line-height: 0.96;
+  font-size: clamp(1.8rem, 3.1vw, 3.35rem);
+  line-height: 1;
   letter-spacing: -0.04em;
-  max-width: 12ch;
+  max-width: 13ch;
 }
 
 .slide-summary {
@@ -292,7 +292,7 @@ select {
 .visual-placeholder {
   position: relative;
   aspect-ratio: 1;
-  width: min(100%, 34rem);
+  width: min(100%, 40rem);
   border-radius: 1.8rem;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(240, 232, 222, 0.96));
@@ -330,7 +330,7 @@ select {
 .systems-board,
 .case-board,
 .visual-caption {
-  width: min(100%, 34rem);
+  width: min(100%, 40rem);
 }
 
 .contrast-board {
@@ -350,7 +350,7 @@ select {
 .contrast-image {
   position: relative;
   aspect-ratio: 1;
-  width: 12rem;
+  width: 15rem;
   justify-self: end;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -507,7 +507,7 @@ select {
   position: absolute;
   right: 1.25rem;
   bottom: 1.25rem;
-  width: 8.5rem;
+  width: 12.5rem;
   aspect-ratio: 1;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -516,7 +516,7 @@ select {
 }
 
 .systems-image-small {
-  width: 7rem;
+  width: 10rem;
 }
 
 .systems-image-faint {
@@ -557,9 +557,9 @@ select {
 
 .visual-caption {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.25rem;
   padding-left: 0.2rem;
-  margin-top: 1rem;
+  margin-top: 0.65rem;
 }
 
 .nav-button,
@@ -569,9 +569,9 @@ select {
 
 .footer-controls {
   display: grid;
-  grid-template-columns: auto minmax(7rem, 9rem) minmax(0, 1fr) auto auto;
-  gap: 1rem;
-  width: min(100%, 72rem);
+  grid-template-columns: auto minmax(5.5rem, 7rem) minmax(0, 1fr) auto auto;
+  gap: 0.8rem;
+  width: min(100%, 64rem);
   margin-inline: auto;
   justify-content: initial;
   min-width: 0;
@@ -583,7 +583,7 @@ select {
   align-items: center;
   gap: 0.45rem;
   color: var(--ink-500);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
@@ -591,12 +591,14 @@ select {
 .nav-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
   border: 1px solid rgba(24, 21, 18, 0.1);
   background: rgba(255, 255, 255, 0.74);
   color: var(--ink-900);
   border-radius: 999px;
-  padding: 0.85rem 1.15rem;
+  padding: 0.72rem;
+  width: 3.1rem;
+  height: 3.1rem;
   cursor: pointer;
 }
 
@@ -645,8 +647,8 @@ select {
 }
 
 .slide-dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.44rem;
+  height: 0.44rem;
   border-radius: 999px;
   border: 0;
   background: rgba(24, 21, 18, 0.12);
@@ -687,7 +689,7 @@ select {
 
 .kind-hero,
 .kind-closing {
-  grid-template-columns: minmax(0, 1.02fr) minmax(20rem, 0.98fr);
+  grid-template-columns: minmax(0, 0.94fr) minmax(24rem, 1.06fr);
 }
 
 @keyframes riseIn {
@@ -741,7 +743,7 @@ select {
   .slide-sheet {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding-top: 7rem;
+    padding-top: 6rem;
   }
 
   .slide-column-visual {
@@ -785,13 +787,13 @@ select {
 
   .footer-pill {
     width: 100%;
-    padding: 0.85rem 0.95rem;
+    padding: 0.78rem 0.9rem;
     border-radius: 1.25rem;
   }
 
   .slide-sheet {
     height: 100vh;
-    padding: 1.5rem 1.15rem 10rem;
+    padding: 1.35rem 1.15rem 8.75rem;
   }
 
   .kind-section .slide-headline {
@@ -799,8 +801,8 @@ select {
   }
 
   .slide-headline {
-    font-size: clamp(1.95rem, 9vw, 3.2rem);
-    max-width: 12.5ch;
+    font-size: clamp(1.65rem, 7.6vw, 2.7rem);
+    max-width: 13ch;
   }
 
   .visual-figure,
@@ -815,7 +817,7 @@ select {
   .contrast-image,
   .systems-image,
   .case-image {
-    width: 7rem;
+    width: 8.75rem;
   }
 
   .footer-controls {

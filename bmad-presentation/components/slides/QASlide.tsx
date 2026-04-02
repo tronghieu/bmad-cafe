@@ -5,6 +5,6 @@ export default createSceneSlide({
   kicker: "Hỏi đáp",
   title: "Hỏi & Đáp",
   headline: "Hỏi & Đáp",
-  summary: "Trao đổi sâu hơn về phương pháp, quy trình, các ca thực tế, hoặc cách thử nghiệm BMAD trong bối cảnh đội ngũ thực tế.",
+  summary: "",
   hideVisual: true,
 });
