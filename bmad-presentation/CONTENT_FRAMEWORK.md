@@ -6,13 +6,14 @@
 **Language:** Vietnamese presentation copy  
 **Core Message:** BMAD does not replace developers. It gives software teams a more structured way to work with AI through roles, documents, checkpoints, and human review.  
 **Narrative Arc:** Hook -> Problem -> Overview -> Heroes -> Method -> Proof -> Action  
-**Implemented Deck Size:** 37 slides total
+**Implemented Deck Size:** 39 slides total
 
 ### Current Deck Structure
 
 - 1 opening title slide
+- 1 speaker introduction slide
 - 7 section divider slides
-- 27 core content slides
+- 28 core content slides
 - 1 Q&A slide
 - 1 thank-you slide
 
@@ -95,15 +96,16 @@
 | Render Order | Slide | Purpose |
 |---|---|---|
 | 1 | **BMAD Method** | Opening title slide |
-| 2 | **Mở Bài** | Section divider |
-| 6 | **Vấn Đề** | Section divider |
-| 11 | **Tổng Quan** | Section divider |
-| 15 | **Đội Hình** | Section divider |
-| 19 | **Phương Pháp** | Section divider |
-| 27 | **Minh Chứng** | Section divider |
-| 32 | **Hành Động** | Section divider |
-| 36 | **Hỏi & Đáp** | Q&A slide |
-| 37 | **Cảm ơn** | Final thank-you slide |
+| 2 | **Lưu Trọng Hiếu** | Speaker introduction slide |
+| 3 | **Mở Bài** | Section divider |
+| 7 | **So Sánh** | Section divider |
+| 12 | **BMAD** | Section divider |
+| 16 | **Đội Hình** | Section divider |
+| 20 | **Phương Pháp** | Section divider |
+| 28 | **Minh Chứng** | Section divider |
+| 35 | **Hành Động** | Section divider |
+| 38 | **Hỏi & Đáp** | Q&A slide |
+| 39 | **Cảm ơn** | Final thank-you slide |
 
 ---
 
@@ -185,15 +187,16 @@
 
 ---
 
-## ACT 7: FUTURE + ECOSYSTEM + CTA (~7 min, 3 core slides)
+## ACT 7: FUTURE + ECOSYSTEM + CTA (~9 min, 4 core slides)
 
 **Theme:** *How teams adopt BMAD without pretending everything is enterprise-scale*
 
 | # | Slide Title | Updated Content | ~Time |
 |---|---|---|---|
-| 25 | **Quy Mô Và Hệ Sinh Thái** | Show that BMAD is not one-size-fits-all: Quick Flow for small work, BMAD standard for product features, Enterprise for heavily governed systems. | 2.5 min |
-| 26 | **Bắt Đầu Ngay** | Keep the CTA operational: install, choose the right track, create the first brief/spec, and run one controlled pilot. | 2 min |
-| 27 | **Kết Lại** | End on a practical message: AI is more useful when it sits inside a structured workflow with human responsibility. | 2.5 min |
+| 25 | **Party Mode** | Present Party Mode as a strong expression of Agentic AI: BMad Master orchestrates a multi-agent discussion where specialized roles debate trade-offs and build on each other's thinking. | 2 min |
+| 26 | **Quy Mô Và Hệ Sinh Thái** | Show that BMAD is not one-size-fits-all: Quick Flow for small work, BMAD standard for product features, Enterprise for heavily governed systems. | 2.5 min |
+| 27 | **Bắt Đầu Ngay** | Keep the CTA operational: install, choose the right track, create the first brief/spec, and run one controlled pilot. | 2 min |
+| 28 | **Kết Lại** | End on a practical message: AI is more useful when it sits inside a structured workflow with human responsibility. | 2.5 min |
 
 ---
 
@@ -401,7 +404,15 @@
 - **Image Direction:** If used, the image should simply elevate the synthesis. The actual pattern should be communicated through text, stats, and a clear comparison diagram.
 - **AI Image Prompt:** `A polished enterprise editorial background evoking software delivery performance, trust, and strategic value, sophisticated boardroom-tech atmosphere, clean negative space for KPI and summary overlays, no readable text, square 1:1 composition`
 
-### Slide 25 — Scale & Ecosystem
+### Slide 25 — Party Mode
+- **Goal:** Show one feature that makes BMAD feel unmistakably agentic.
+- **Takeaway:** Party Mode creates a real multi-agent discussion where specialized roles can agree, disagree, and expose trade-offs before a decision is made.
+- **Supporting Detail:** BMad Master orchestrates the conversation, selects relevant agents, manages turn-taking, and helps keep the discussion productive.
+- **Proof / Evidence:** Best fit is architectural decisions, retrospectives, and technical trade-offs. Avoid using it for sequential execution or when a clean output artifact is needed immediately.
+- **Speaker Angle:** High-value and concrete, not gimmicky.
+- **Preferred Visual Source:** Use a simple multi-agent discussion diagram or role map rather than a decorative illustration.
+
+### Slide 26 — Scale & Ecosystem
 - **Goal:** Prevent the audience from assuming BMAD is always heavyweight.
 - **Takeaway:** BMAD adapts its rigor to the size and risk of the work.
 - **Supporting Detail:** Quick Flow for small changes, BMAD for product work, Enterprise for heavily governed systems; then show domain expansion through packs and builder tools.
@@ -409,7 +420,7 @@
 - **Speaker Angle:** Flexible and pragmatic.
 - **Preferred Visual Source:** Use a clean scale ladder or maturity model diagram built in the deck.
 
-### Slide 26 — Get Started Now
+### Slide 27 — Get Started Now
 - **Goal:** Convert curiosity into a safe first step.
 - **Takeaway:** Start with one controlled pilot, not a company-wide proclamation.
 - **Supporting Detail:** Install, choose track, create the first brief/spec, and run a small contained workflow.
@@ -417,7 +428,7 @@
 - **Speaker Angle:** Practical and low-friction.
 - **Preferred Visual Source:** Use the actual install command, QR code, and starter path as the visual.
 
-### Slide 27 — Closing
+### Slide 28 — Closing
 - **Goal:** End on a memorable principle, not a product pitch.
 - **Takeaway:** The future belongs to teams that combine human judgment with disciplined AI systems.
 - **Supporting Detail:** Reframe BMAD as the bridge from AI toys to AI tools.

@@ -18,6 +18,7 @@ import {
   MethodSectionSlide,
   OpeningTitleSlide,
   OutsourcingCostSlide,
+  PartyModeSlide,
   OverviewSectionSlide,
   PillarsSlide,
   PlanningExecutionSlide,
@@ -30,6 +31,7 @@ import {
   RoadmapRoleShiftSlide,
   RoiPatternSlide,
   ScaleEcosystemSlide,
+  SpeakerIntroSlide,
   ShiftSlide,
   SoftwareArchaeologySlide,
   SpecializationWinsSlide,
@@ -43,6 +45,7 @@ export default function HomePage() {
   return (
     <Presentation>
       <OpeningTitleSlide />
+      <SpeakerIntroSlide />
       <HookSectionSlide />
       <ColdOpenSlide />
       <ThreeDayMiracleSlide />
@@ -73,6 +76,7 @@ export default function HomePage() {
       <FoodInsightSlide />
       <SoftwareArchaeologySlide />
       <RoiPatternSlide />
+      <PartyModeSlide />
       <ActionSectionSlide />
       <ScaleEcosystemSlide />
       <GetStartedSlide />

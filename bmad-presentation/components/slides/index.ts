@@ -1,4 +1,5 @@
 export { default as OpeningTitleSlide } from "./OpeningTitleSlide";
+export { default as SpeakerIntroSlide } from "./SpeakerIntroSlide";
 export { default as HookSectionSlide } from "./HookSectionSlide";
 export { default as ColdOpenSlide } from "./ColdOpenSlide";
 export { default as ThreeDayMiracleSlide } from "./ThreeDayMiracleSlide";
@@ -29,6 +30,7 @@ export { default as QuickBuySlide } from "./QuickBuySlide";
 export { default as FoodInsightSlide } from "./FoodInsightSlide";
 export { default as SoftwareArchaeologySlide } from "./SoftwareArchaeologySlide";
 export { default as RoiPatternSlide } from "./RoiPatternSlide";
+export { default as PartyModeSlide } from "./PartyModeSlide";
 export { default as ActionSectionSlide } from "./ActionSectionSlide";
 export { default as ScaleEcosystemSlide } from "./ScaleEcosystemSlide";
 export { default as GetStartedSlide } from "./GetStartedSlide";

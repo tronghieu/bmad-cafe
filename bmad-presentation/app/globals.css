@@ -182,6 +182,93 @@ select {
   justify-content: center;
 }
 
+.speaker-slide {
+  grid-template-columns: minmax(18rem, 0.76fr) minmax(0, 1.24fr);
+  align-items: center;
+}
+
+.speaker-visual-col {
+  display: flex;
+  justify-content: center;
+}
+
+.speaker-portrait-wrap {
+  position: relative;
+  width: min(100%, 24rem);
+}
+
+.speaker-portrait-glow {
+  position: absolute;
+  inset: -0.85rem;
+  border-radius: 2.4rem;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(199, 91, 46, 0.18), transparent 55%),
+    radial-gradient(circle at 70% 75%, rgba(199, 91, 46, 0.12), transparent 50%);
+  filter: blur(14px);
+}
+
+.speaker-portrait-frame {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 2.1rem;
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  box-shadow: var(--shadow-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(240, 232, 222, 0.94));
+}
+
+.speaker-portrait-image {
+  object-fit: cover;
+}
+
+.speaker-float-badge {
+  position: absolute;
+  top: -0.9rem;
+  right: -0.8rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(24, 21, 18, 0.08);
+  box-shadow: 0 18px 34px rgba(74, 55, 42, 0.12);
+}
+
+.speaker-float-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--ember-600);
+}
+
+.speaker-copy-col {
+  justify-content: center;
+}
+
+.speaker-role {
+  max-width: 38rem;
+}
+
+.speaker-chip-row {
+  margin-top: 1.35rem;
+}
+
+.speaker-experience-list {
+  max-width: 46rem;
+}
+
+.speaker-quote {
+  margin: 1.6rem 0 0;
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(24, 21, 18, 0.08);
+  font-family: var(--font-display), serif;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  max-width: 34rem;
+}
+
 .kind-section {
   grid-template-columns: 1fr;
   align-items: center;
@@ -782,7 +869,15 @@ select {
     padding-top: 6rem;
   }
 
+  .speaker-slide {
+    grid-template-columns: 1fr;
+  }
+
   .slide-column-visual {
+    order: -1;
+  }
+
+  .speaker-visual-col {
     order: -1;
   }
 
@@ -839,6 +934,15 @@ select {
   .slide-headline {
     font-size: clamp(1.65rem, 7.6vw, 2.7rem);
     max-width: 13ch;
+  }
+
+  .speaker-portrait-wrap {
+    width: min(100%, 16rem);
+    margin-top: 0.75rem;
+  }
+
+  .speaker-quote {
+    font-size: 1.1rem;
   }
 
   .visual-figure,
