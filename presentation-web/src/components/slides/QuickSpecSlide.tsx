@@ -2,83 +2,121 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileSearch, MessageSquare, Code2, CheckSquare } from 'lucide-react';
-
-const steps = [
-  {
-    num: '01',
-    icon: <MessageSquare className="w-5 h-5" />,
-    title: 'Hiểu yêu cầu',
-    desc: 'Hiểu yêu cầu, quét nhanh codebase, và init file tech-spec-wip.md.',
-    color: 'text-blue-400 bg-blue-400/10 border-blue-400/20',
-  },
-  {
-    num: '02',
-    icon: <FileSearch className="w-5 h-5" />,
-    title: 'Phân tích sâu hơn',
-    desc: 'Khảo sát sâu code để xác định chính xác các file, patterns, và ràng buộc kỹ thuật.',
-    color: 'text-indigo-400 bg-indigo-400/10 border-indigo-400/20',
-  },
-  {
-    num: '03',
-    icon: <Code2 className="w-5 h-5" />,
-    title: 'Tạo Spec',
-    desc: 'Danh sách task có thứ tự. Acceptance Criteria dạng Given/When/Then. Dependencies & test strategy.',
-    color: 'text-secondary bg-secondary/10 border-secondary/20',
-  },
-  {
-    num: '04',
-    icon: <CheckSquare className="w-5 h-5" />,
-    title: 'Review & Hoàn Thiện',
-    desc: 'Review, chỉnh sửa, và hoàn thiện spec trước khi bàn giao cho dev.',
-    color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
-  },
-];
-
-const readyStandard = [
-  { label: 'Actionable', desc: 'Mỗi task có file path cụ thể và hành động rõ ràng' },
-  { label: 'Logical', desc: 'Task sắp xếp theo dependency — thấp nhất trước' },
-  { label: 'Testable', desc: 'Tất cả AC dùng Given/When/Then bao phủ happy path + edge cases' },
-  { label: 'Complete', desc: 'Không có placeholder hay TBD — tất cả findings đã inline' },
-  { label: 'Self-Contained', desc: 'Agent mới có thể triển khai mà không cần đọc lịch sử chat' },
-];
+import { FileText, Lightbulb, Search, Zap, CheckCircle } from 'lucide-react';
 
 export const QuickSpecSlide = () => (
   <div className="w-full max-w-6xl space-y-8">
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center space-y-2"
+      className="text-center space-y-3"
     >
-      <h2 className="text-5xl font-black text-white tracking-tighter">
-        Quick <span className="text-secondary italic">Spec</span>
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+        <FileText className="w-4 h-4 text-blue-400" />
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-white/50">Quick Spec</span>
+      </div>
+      <h2 className="text-4xl font-black text-white tracking-tighter">
+        From Feature Idea to <span className="text-blue-400 italic">Implementation-Ready Spec</span>
       </h2>
-      <p className="text-base text-white/40">
-        <code className="font-mono text-secondary/80">/bmad-bmm-quick-spec</code>
-        {' '}→{' '}
-        <code className="font-mono text-white/50">tech-spec-{'{slug}'}.md</code>
-      </p>
+      <code className="text-sm text-blue-400 font-mono">/bmad-bmm-quick-spec</code>
     </motion.div>
 
     <div className="grid grid-cols-4 gap-4">
-      {steps.map((s, i) => (
+      {[
+        {
+          icon: <Lightbulb className="w-8 h-8 text-yellow-400" />,
+          step: 'Step 1',
+          title: 'Understand',
+          desc: 'Define requirement delta — what needs to change and why',
+          points: [
+            'Quick orient scan (<30s)',
+            'Asks informed questions',
+            'Creates tech-spec-wip.md',
+          ],
+          color: 'border-yellow-500/20 bg-yellow-500/5',
+        },
+        {
+          icon: <Search className="w-8 h-8 text-purple-400" />,
+          step: 'Step 2',
+          title: 'Investigate',
+          desc: 'Map technical constraints and anchor points in codebase',
+          points: [
+            'Deep-reads relevant files',
+            'Identifies tech stack',
+            'Confirms findings',
+          ],
+          color: 'border-purple-500/20 bg-purple-500/5',
+        },
+        {
+          icon: <Zap className="w-8 h-8 text-orange-400" />,
+          step: 'Step 3',
+          title: 'Generate',
+          desc: 'Produce implementation plan from technical mapping',
+          points: [
+            'Ordered task list',
+            'Given/When/Then ACs',
+            'Dependencies & risks',
+          ],
+          color: 'border-orange-500/20 bg-orange-500/5',
+        },
+        {
+          icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+          step: 'Step 4',
+          title: 'Review & Finalize',
+          desc: 'Iterate until "Ready for Development" standard',
+          points: [
+            'Present full spec',
+            'Edit/Question/Review',
+            'Rename to final file',
+          ],
+          color: 'border-green-500/20 bg-green-500/5',
+        },
+      ].map((item, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15 + i * 0.1 }}
-          className={`p-5 rounded-2xl border ${s.color} space-y-3`}
+          transition={{ delay: 0.2 + i * 0.1 }}
+          className={`p-5 rounded-3xl border ${item.color} space-y-3`}
         >
-          <div className="flex items-center gap-2">
-            {s.icon}
-            <span className="font-mono text-xs opacity-60">{s.num}</span>
+          <div className="flex flex-col items-center text-center gap-2">
+            {item.icon}
+            <div>
+              <p className="text-xs text-white/50 font-mono">{item.step}</p>
+              <h3 className="text-lg font-black text-white">{item.title}</h3>
+            </div>
           </div>
-          <h3 className="font-bold text-white">{s.title}</h3>
-          <p className="text-xs text-white/55 leading-relaxed">{s.desc}</p>
+          <p className="text-xs text-white/70 text-center">{item.desc}</p>
+          <div className="space-y-1">
+            {item.points.map((point, j) => (
+              <p key={j} className="text-xs text-white/50">• {point}</p>
+            ))}
+          </div>
         </motion.div>
       ))}
     </div>
 
-
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6 }}
+      className="p-6 rounded-2xl bg-secondary/5 border border-secondary/20"
+    >
+      <h3 className="text-lg font-bold text-white mb-3 text-center">"Ready for Development" Standard</h3>
+      <div className="grid grid-cols-5 gap-4">
+        {[
+          { label: 'Actionable', desc: 'Every task has file path + action' },
+          { label: 'Logical', desc: 'Tasks ordered by dependency' },
+          { label: 'Testable', desc: 'All ACs use Given/When/Then' },
+          { label: 'Complete', desc: 'No placeholders or TBD' },
+          { label: 'Self-Contained', desc: 'Fresh agent can implement' },
+        ].map((criterion, i) => (
+          <div key={i} className="text-center">
+            <p className="text-sm font-bold text-secondary">{criterion.label}</p>
+            <p className="text-xs text-white/50 mt-1">{criterion.desc}</p>
+          </div>
+        ))}
+      </div>
+    </motion.div>
   </div>
 );

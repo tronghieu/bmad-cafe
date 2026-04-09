@@ -38,8 +38,8 @@ export const SectionHeadingSlide = ({
         transition={{ delay: 0.3 }}
         className="space-y-4"
       >
-        <div className="text-xl md:text-2xl font-mono text-white/40 tracking-[0.5em] uppercase">
-          Phần <span className={variant === 'secondary' ? 'text-secondary' : 'text-accent'}>{number}</span>
+        <div className="text-xl md:text-2xl text-white/40 tracking-[0.5em] uppercase">
+          Part <span className={variant === 'secondary' ? 'text-secondary' : 'text-accent'}>{number}</span>
         </div>
         <h2 className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-tight drop-shadow-2xl">
           {title}

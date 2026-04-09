@@ -2,77 +2,84 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, ArrowRight, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { FileText, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const ProjectContextSlide = () => (
-  <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    {/* Visual */}
-    <div className="relative p-10 bg-white/5 rounded-3xl border border-white/10 overflow-hidden flex items-center justify-center min-h-[340px]">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 grid grid-cols-8 gap-1">
-          {Array.from({ length: 64 }).map((_, i) => (
-            <div key={i} className="aspect-square border border-white/20" />
-          ))}
-        </div>
+  <div className="w-full max-w-5xl space-y-10">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-center space-y-3"
+    >
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
+        <FileText className="w-4 h-4 text-secondary" />
+        <span className="text-xs font-mono uppercase tracking-[0.2em] text-white/50">Do This Before Anything Else</span>
       </div>
+      <h2 className="text-5xl font-black text-white tracking-tighter">
+        <span className="text-secondary italic">Project Context</span>
+      </h2>
+      <p className="italic text-lg text-white/60">"Prepare onboarding documentation for your new team members"</p>
+    </motion.div>
 
-      <div className="relative z-10 flex flex-col items-center gap-5">
-        <div className="px-5 py-2 bg-card border border-border rounded-xl font-mono text-xs text-white/60">
-          /bmad-bmm-generate-project-context
+    <div className="grid grid-cols-2 gap-8">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2 }}
+        className="space-y-6"
+      >
+        <div className="space-y-4">
+          <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-3">Without Project Context</h3>
+            <p className="text-sm text-red-400">❌ Agents ask generic questions</p>
+            <p className="text-sm text-red-400">❌ You're forcing the new member to do a new task without an onboarding process.</p>
+            <p className="text-sm text-red-400">❌ Waste time on back-and-forth</p>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-secondary/5 border border-secondary/20">
+            <h3 className="text-xl font-bold text-white mb-3">With Project Context</h3>
+            <p className="text-sm text-green-400">✓ Follow project conventions & patterns</p>
+            <p className="text-sm text-green-400">✓ Understand the big picture</p>
+            <p className="text-sm text-green-400">✓ Deliver closer results to our expectation</p>
+          </div>
         </div>
-        <ArrowRight className="w-6 h-6 text-white/30" />
-        <motion.div
-          animate={{ y: [0, -4, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity }}
-          className="flex items-center gap-3 p-4 bg-secondary/10 border border-secondary/30 rounded-xl"
-        >
-          <FileText className="w-6 h-6 text-secondary" />
-          <span className="font-mono text-secondary font-bold text-sm">project-context.md</span>
-        </motion.div>
-        <div className="text-center space-y-2 mt-2">
-          {['Tech stack & kiến trúc', 'Code patterns & conventions', 'Test patterns', 'Implementation rules'].map((t, i) => (
-            <div key={i} className="flex items-center gap-2 text-xs text-white/50">
-              <div className="w-1.5 h-1.5 rounded-full bg-secondary/60 flex-shrink-0" />
-              {t}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3 }}
+        className="space-y-6"
+      >
+        <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+          <h3 className="text-xl font-bold text-white mb-4">What It Contains</h3>
+          <div className="space-y-2">
+            {[
+              'Critical implementation rules',
+              'Code patterns and conventions',
+              'Tech stack and architectural decisions',
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-white/70">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="p-4 rounded-2xl bg-blue-500/5 border border-blue-500/20">
+          <div className="flex items-start gap-3">
+            <Sparkles className="w-5 h-5 text-blue-400 mt-0.5" />
+            <div>
+              <h4 className="text-sm font-bold text-white mb-1">How to Generate</h4>
+              <code className="text-xs text-blue-400 font-mono bg-blue-500/10 px-2 py-1 rounded">
+                /bmad-bmm-generate-project-context
+              </code>
+              <p className="text-xs text-white/50 mt-2">Agent: Mary (📊 Business Analyst)</p>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    {/* Content */}
-    <div className="space-y-7">
-      <div>
-        <h2 className="text-4xl font-bold text-white leading-tight mb-2">
-          Project Context — <span className="text-secondary">Làm trước tiên</span>
-        </h2>
-        <p className="text-base text-white/50">
-          Chứa những context quan trọng về dự án như framework và các patterns cần follow khi thêm mới hoặc chỉnh sửa.
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        <div className="flex items-start gap-4 p-4 rounded-2xl bg-red-500/5 border border-red-500/10">
-          <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-sm font-semibold text-red-300 mb-0.5">Không có Project Context</p>
-            <p className="text-xs text-white/50">Agent hỏi câu hỏi chung chung, có thể bỏ qua các convention đã có sẵn trong codebase.</p>
           </div>
         </div>
-        <div className="flex items-start gap-4 p-4 rounded-2xl bg-secondary/5 border border-secondary/10">
-          <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-sm font-semibold text-secondary mb-0.5">Có Project Context</p>
-            <p className="text-xs text-white/50">Agent hỏi các câu hỏi <em>có căn cứ, cụ thể</em> dựa trên những gì đã tìm thấy trong dự án.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="p-4 bg-white/5 border border-white/10 rounded-2xl">
-        <p className="text-xs italic text-white/40">
-          💡 Luôn tạo Project Context trước khi thực hiện bất kỳ Quick Flow nào. Tốn vài phút nhưng tiết kiệm rất nhiều thời gian trao đổi sau đó.
-        </p>
-      </div>
+      </motion.div>
     </div>
   </div>
 );
